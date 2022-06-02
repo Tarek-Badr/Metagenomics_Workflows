@@ -1,0 +1,41 @@
+#!/usr/bin/bash
+
+read -p "Run ID: " RUN
+
+#Basecalling with guppy (output in fastq):
+#bash Nano16S/bc
+
+#Join fastq together (output in fastq_joined):
+mkdir -p fastq_joined
+for barcode in $(ls fastq)
+do
+FASTQ_NUMBER=$(ls fastq/${barcode}/pass | wc -l)
+BC=$(echo $barcode | sed 's/^.*barcode//')
+echo "${barcode}: ${FASTQ_NUMBER}"
+if [ $FASTQ_NUMBER -eq 1 ]; then
+	cp fastq/${barcode}/pass/* "fastq_joined/${RUN}_BC${BC}.fastq.gz"
+elif [ $FASTQ_NUMBER > 1 ]; then
+	cat fastq/${barcode}/pass/*.fastq.gz > "fastq_joined/${RUN}_BC${BC}.fastq.gz"
+fi
+done
+
+#Quality control
+mkdir -p fastQC/original
+for file in $(ls fastq_joined/*.fastq.gz)
+do
+    fastqc -t 5 $file -o fastQC/original
+done
+mkdir -p multiQC
+multiqc fastQC/original/*_fastqc.zip -o multiQC --filename $RUN
+
+#Filter + QC
+bash Nano16S/filt
+
+#Alignment
+bash Nano16S/align
+
+#Krona pie
+mkdir -p krona
+ktImportTaxonomy -q 2 -t 3 kraken/*.krona.kraken -o krona/${RUN}.html
+
+

@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+mkdir fastQC
+
+read -p "Rawdata directory: " DIR
+
+for file in $(ls $DIR/*.fastq.gz)
+do
+    fastqc -t 5 $file -o fastQC
+done
+
+

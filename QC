@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+case "$1" in
+	fQC)
+	 read -p "Fastq directory: " DIR
+	 mkdir -p fastQC
+	 for file in $(ls $DIR/*.fastq.gz)
+	 do
+	 fastqc -t 5 $file -o fastQC
+	 done
+	 ;;
+	mQC)
+	 read -p "Run ID: " RUN
+	 mkdir -p multiQC
+	 multiqc fastQC/*_fastqc.zip -o multiQC --filename $RUN
+	 ;;
+	fmQC)
+	 bash Nano16S/QC fQC
+	 bash Nano16S/QC mQC
+	 ;;
+	*)
+	 echo "Usage: fQC/mQC/fmQC"
+	 ;;
+esac

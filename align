@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+mkdir -p kraken
+
+for file in $(ls fastq_trimmed/*fastq.gz)
+do
+NAME=$(basename ${file} .fastq.gz)
+kraken2 --db minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "kraken/${NAME}.kraken" --report "kraken/${NAME}.report.txt" --use-names
+kraken2 --db minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "kraken/${NAME}.krona.kraken"
+done
+
+

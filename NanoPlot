@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+#Nanoplot with
+#	-all: all fastq in input
+#	-separate: a nanoplot per fastq
+#	-summary: nanoplot with the guppy summary
+
+case "$1" in 
+	all)
+	 mkdir -p nanoplot/fastq_all
+	 NanoPlot -t 2 --fastq $(ls fastq_joined/*fastq.gz) -o nanoplot/fastq_all
+	 ;;
+	separate)
+	 for file in $(ls fastq_joined/*fastq.gz)
+	 do
+	 DIR=nanoplot/fastq/$(basename $file)
+	 mkdir -p $DIR
+	 NanoPlot -t 2 --fastq $file -o $DIR
+	 done
+	 ;;
+	summary)
+	 for barcode in $(ls fastq)
+	 do
+	 DIR=nanoplot/guppy_summary/${barcode}
+	 mkdir -p $DIR
+	 NanoPlot --summary fastq/${barcode}/sequencing_summary.txt -o $DIR
+	 done
+	 ;;
+esac

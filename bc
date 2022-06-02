@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+#To get configuration file:
+#gupy_basecaller --print_workflows
+#sequencing_MIN106_DNA:FLO-FLG001:SQK-RAB204 --> dna_r9.4.1_450bps_hac
+
+#Run guppy
+read -p "Directory: " DIR
+
+mkdir -p fastq
+guppy_basecaller --compress_fastq -i $DIR -s fastq -c dna_r9.4.1_450bps_hac.cfg --barcode_kits "SQK-RAB204"
+

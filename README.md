@@ -1,1 +1,1 @@
-# Nanopore_metagenomics
+# Nano16S
