@@ -1,17 +1,19 @@
 #!/usr/bin/bash
 
-read -p "Run ID: " RUN
+read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+read -p "Run (for file names, e.g. RunA): " RUN1
 
-mkdir -p fastq_joined
-for barcode in $(ls fastq)
+mkdir -p ${RUN}/fastq_joined
+
+for barcode in $(ls ${RUN}/fastq/fastq_pass)
 do
-FASTQ_NUMBER=$(ls fastq/${barcode}/pass | wc -l)
+FASTQ_NUMBER=$(ls ${RUN}/fastq/fastq_pass/${barcode} | wc -l)
 BC=$(echo $barcode | sed 's/^.*barcode//')
 echo "${barcode}: ${FASTQ_NUMBER}"
 if [ $FASTQ_NUMBER -eq 1 ]; then
-	cp fastq/${barcode}/pass/* "fastq_joined/${RUN}_BC${BC}.fastq.gz"
+	cp ${RUN}/fastq/fastq_pass/${barcode}/* "${RUN}/fastq_joined/${RUN1}_BC${BC}.fastq.gz"
 elif [ $FASTQ_NUMBER > 1 ]; then
-	cat fastq/${barcode}/pass/*.fastq.gz > "fastq_joined/${RUN}_BC${BC}.fastq.gz"
+	cat ${RUN}/fastq/fastq_pass/${barcode}/*.fastq.gz > "${RUN}/fastq_joined/${RUN1}_BC${BC}.fastq.gz"
 fi
 done
 
