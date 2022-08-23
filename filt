@@ -26,7 +26,7 @@ SAMPLES=$(ls ${RUN}/fastq_porechoped/*.fastq.gz)
 for SAMPLE in $SAMPLES
 do
 echo "Running Nanofilt on ${SAMPLE}"
-gunzip -c $SAMPLE | NanoFilt -q 8 --headcrop 50 | gzip > "${RUN}/fastq_trimmed/trimmed_$(basename ${SAMPLE})"
+gunzip -c $SAMPLE | NanoFilt -q 7 --headcrop 20 --tailcrop 20 | gzip > "${RUN}/fastq_trimmed/trimmed_$(basename ${SAMPLE})"
 done
 
 #Quality control
