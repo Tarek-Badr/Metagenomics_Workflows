@@ -1,12 +1,12 @@
 #!/usr/bin/bash
 
-mkdir fastQC
+read -p "Folder (e.g. NanoClinRunA_processed): " RUN
 
-read -p "Rawdata directory: " DIR
+mkdir -p ${RUN}/fastQC
 
-for file in $(ls $DIR/*.fastq.gz)
+for file in $(ls ${RUN}/fastq_joined/*.fastq.gz)
 do
-    fastqc -t 5 $file -o fastQC
+    fastqc -t 5 $file -o ${RUN}/fastQC
 done
 
 
