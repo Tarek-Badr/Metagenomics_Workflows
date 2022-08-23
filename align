@@ -1,11 +1,14 @@
 #!/usr/bin/bash
-mkdir -p kraken
 
-for file in $(ls fastq_trimmed/*fastq.gz)
+read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+
+mkdir -p ${RUN}/kraken
+
+for file in $(ls ${RUN}/fastq_trimmed/*fastq.gz)
 do
 NAME=$(basename ${file} .fastq.gz)
-kraken2 --db minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "kraken/${NAME}.kraken" --report "kraken/${NAME}.report.txt" --use-names
-kraken2 --db minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "kraken/${NAME}.krona.kraken"
+kraken2 --db minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "${RUN}/kraken/${NAME}.kraken" --report "${RUN}/kraken/${NAME}.report.txt" --use-names
+kraken2 --db minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "${RUN}/kraken/${NAME}.krona.kraken"
 done
 
 
