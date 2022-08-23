@@ -1,36 +1,38 @@
 #!/usr/bin/bash
 
+read -p "Folder (e.g. NanoClinRunA_processed): " RUN 
+
 #Porechop - cut adapters
-mkdir fastq_porechoped
-SAMPLES=$(ls fastq_joined/*.fastq.gz)
+mkdir -p ${RUN}/fastq_porechoped
+SAMPLES=$(ls ${RUN}/fastq_joined/*.fastq.gz)
 for SAMPLE in $SAMPLES
 do
-porechop -i $SAMPLE -o fastq_porechoped/"porechoped_$(basename ${SAMPLE})" --discard_middle #-b fastq_porechoped
+porechop -i $SAMPLE -o ${RUN}/fastq_porechoped/"porechoped_$(basename ${SAMPLE})" --discard_middle 
 done
 
 #Quality control
-mkdir -p fastQC/porechoped
-for file in $(ls fastq_porechoped/*.fastq.gz)
+mkdir -p ${RUN}/fastQC/porechoped
+for file in $(ls ${RUN}/fastq_porechoped/*.fastq.gz)
 do
-    fastqc -t 5 $file -o fastQC/porechoped
+    fastqc -t 5 $file -o ${RUN}/fastQC/porechoped
 done
 
-mkdir -p multiQC
-multiqc fastQC/porechoped/*_fastqc.zip -o multiQC --filename porechoped
+mkdir -p ${RUN}/multiQC
+multiqc ${RUN}/fastQC/porechoped/*_fastqc.zip -o ${RUN}/multiQC --filename porechoped
 
 #Nanofilt - quality filter
-mkdir -p fastq_trimmed
-SAMPLES=$(ls fastq_porechoped/*.fastq.gz)
+mkdir -p ${RUN}/fastq_trimmed
+SAMPLES=$(ls ${RUN}/fastq_porechoped/*.fastq.gz)
 for SAMPLE in $SAMPLES
 do
-gunzip -c $SAMPLE | NanoFilt -q 8 --headcrop 50 | gzip > "fastq_trimmed/trimmed_$(basename ${SAMPLE})"
+gunzip -c $SAMPLE | NanoFilt -q 8 --headcrop 50 | gzip > "${RUN}/fastq_trimmed/trimmed_$(basename ${SAMPLE})"
 done
 
 #Quality control
-mkdir -p fastQC/trimmed
-for file in $(ls fastq_trimmed/*.fastq.gz)
+mkdir -p ${RUN}/fastQC/trimmed
+for file in $(ls ${RUN}/fastq_trimmed/*.fastq.gz)
 do
-    fastqc -t 5 $file -o fastQC/trimmed
+    fastqc -t 5 $file -o ${RUN}/fastQC/trimmed
 done
 
 multiqc fastQC/trimmed/*_fastqc.zip -o multiQC --filename trimmed
