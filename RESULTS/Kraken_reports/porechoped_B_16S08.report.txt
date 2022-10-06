@@ -1,0 +1,113 @@
+  3.37	6	6	U	0	unclassified
+ 96.63	172	0	R	1	root
+ 96.63	172	0	R1	131567	  cellular organisms
+ 85.96	153	1	D	2	    Bacteria
+ 84.83	151	2	P	1224	      Proteobacteria
+ 83.15	148	16	C	1236	        Gammaproteobacteria
+ 58.43	104	0	O	72274	          Pseudomonadales
+ 55.06	98	4	F	135621	            Pseudomonadaceae
+ 51.69	92	37	G	286	              Pseudomonas
+ 21.35	38	2	G1	136841	                Pseudomonas aeruginosa group
+ 20.22	36	27	S	287	                  Pseudomonas aeruginosa
+  4.49	8	8	S1	1408272	                    Pseudomonas aeruginosa LES431
+  0.56	1	1	S1	1280938	                    Pseudomonas aeruginosa B136-33
+  4.49	8	0	G1	136846	                Pseudomonas stutzeri group
+  4.49	8	0	G2	578833	                  Pseudomonas stutzeri subgroup
+  4.49	8	8	S	316	                    Pseudomonas stutzeri
+  1.12	2	2	S	797277	                Pseudomonas litoralis
+  1.12	2	2	S	1853130	                Pseudomonas silesiensis
+  0.56	1	0	G1	136849	                Pseudomonas syringae group
+  0.56	1	0	G2	251695	                  Pseudomonas syringae group genomosp. 1
+  0.56	1	1	S	317	                    Pseudomonas syringae
+  0.56	1	1	S	1500686	                Pseudomonas sp. Os17
+  0.56	1	1	S	1245526	                Pseudomonas guangdongensis
+  0.56	1	0	G1	136842	                Pseudomonas chlororaphis group
+  0.56	1	1	S	587753	                  Pseudomonas chlororaphis
+  0.56	1	0	G1	136843	                Pseudomonas fluorescens group
+  0.56	1	1	S	47883	                  Pseudomonas synxantha
+  1.12	2	0	F1	351	              Azotobacter group
+  1.12	2	0	G	352	                Azotobacter
+  1.12	2	2	S	353	                  Azotobacter chroococcum
+  3.37	6	0	F	468	            Moraxellaceae
+  3.37	6	1	G	469	              Acinetobacter
+  2.25	4	4	S	29430	                Acinetobacter haemolyticus
+  0.56	1	0	S	52133	                Acinetobacter venetianus
+  0.56	1	1	S1	1197884	                  Acinetobacter venetianus VE-C3
+ 10.67	19	4	O	91347	          Enterobacterales
+  7.87	14	0	F	543	            Enterobacteriaceae
+  6.18	11	0	G	590	              Salmonella
+  6.18	11	0	S	28901	                Salmonella enterica
+  6.18	11	0	S1	59201	                  Salmonella enterica subsp. enterica
+  6.18	11	0	S2	115981	                    Salmonella enterica subsp. enterica serovar Montevideo
+  6.18	11	11	S3	1454604	                      Salmonella enterica subsp. enterica serovar Montevideo str. USDA-ARS-USMARC-1904
+  0.56	1	1	G	547	              Enterobacter
+  0.56	1	0	G	561	              Escherichia
+  0.56	1	1	S	562	                Escherichia coli
+  0.56	1	0	G	570	              Klebsiella
+  0.56	1	1	S	573	                Klebsiella pneumoniae
+  0.56	1	0	F	1903414	            Morganellaceae
+  0.56	1	0	G	581	              Morganella
+  0.56	1	1	S	582	                Morganella morganii
+  2.25	4	0	O	135623	          Vibrionales
+  2.25	4	0	F	641	            Vibrionaceae
+  2.25	4	0	G	657	              Photobacterium
+  2.25	4	0	S	74109	                Photobacterium profundum
+  2.25	4	4	S1	298386	                  Photobacterium profundum SS9
+  1.12	2	0	O	135622	          Alteromonadales
+  1.12	2	0	F	72275	            Alteromonadaceae
+  0.56	1	0	G	226	              Alteromonas
+  0.56	1	1	S	589873	                Alteromonas australica
+  0.56	1	0	G	89404	              Glaciecola
+  0.56	1	0	S	300231	                Glaciecola nitratireducens
+  0.56	1	1	S1	1085623	                  Glaciecola nitratireducens FR1064
+  0.56	1	0	O	118969	          Legionellales
+  0.56	1	1	F	444	            Legionellaceae
+  0.56	1	0	O	135615	          Cardiobacteriales
+  0.56	1	0	F	868	            Cardiobacteriaceae
+  0.56	1	0	G	869	              Dichelobacter
+  0.56	1	1	S	870	                Dichelobacter nodosus
+  0.56	1	0	O	72273	          Thiotrichales
+  0.56	1	0	F	34064	            Francisellaceae
+  0.56	1	0	G	262	              Francisella
+  0.56	1	0	S	28110	                Francisella philomiragia
+  0.56	1	1	S1	539329	                  Francisella philomiragia subsp. philomiragia ATCC 25015
+  0.56	1	0	C	28211	        Alphaproteobacteria
+  0.56	1	0	O	204441	          Rhodospirillales
+  0.56	1	0	F	41295	            Rhodospirillaceae
+  0.56	1	0	G	168934	              Thalassospira
+  0.56	1	0	S	220697	                Thalassospira xiamenensis
+  0.56	1	1	S1	1123366	                  Thalassospira xiamenensis M-5 = DSM 17429
+  0.56	1	0	D1	1783272	      Terrabacteria group
+  0.56	1	0	P	1239	        Firmicutes
+  0.56	1	0	C	91061	          Bacilli
+  0.56	1	1	O	1385	            Bacillales
+ 10.67	19	0	D	2759	    Eukaryota
+ 10.67	19	0	D1	33154	      Opisthokonta
+ 10.67	19	0	K	33208	        Metazoa
+ 10.67	19	0	K1	6072	          Eumetazoa
+ 10.67	19	0	K2	33213	            Bilateria
+ 10.67	19	0	K3	33511	              Deuterostomia
+ 10.67	19	0	P	7711	                Chordata
+ 10.67	19	0	P1	89593	                  Craniata
+ 10.67	19	0	P2	7742	                    Vertebrata
+ 10.67	19	0	P3	7776	                      Gnathostomata
+ 10.67	19	0	P4	117570	                        Teleostomi
+ 10.67	19	0	P5	117571	                          Euteleostomi
+ 10.67	19	0	P6	8287	                            Sarcopterygii
+ 10.67	19	0	P7	1338369	                              Dipnotetrapodomorpha
+ 10.67	19	0	P8	32523	                                Tetrapoda
+ 10.67	19	0	P9	32524	                                  Amniota
+ 10.67	19	0	C	40674	                                    Mammalia
+ 10.67	19	0	C1	32525	                                      Theria
+ 10.67	19	0	C2	9347	                                        Eutheria
+ 10.67	19	0	C3	1437010	                                          Boreoeutheria
+ 10.67	19	0	C4	314146	                                            Euarchontoglires
+ 10.67	19	0	O	9443	                                              Primates
+ 10.67	19	0	O1	376913	                                                Haplorrhini
+ 10.67	19	0	O2	314293	                                                  Simiiformes
+ 10.67	19	0	O3	9526	                                                    Catarrhini
+ 10.67	19	0	O4	314295	                                                      Hominoidea
+ 10.67	19	0	F	9604	                                                        Hominidae
+ 10.67	19	0	F1	207598	                                                          Homininae
+ 10.67	19	0	G	9605	                                                            Homo
+ 10.67	19	19	S	9606	                                                              Homo sapiens

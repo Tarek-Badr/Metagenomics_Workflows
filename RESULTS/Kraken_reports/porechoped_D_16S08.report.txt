@@ -1,0 +1,9 @@
+100.00	1	0	R	1	root
+100.00	1	0	R1	131567	  cellular organisms
+100.00	1	0	D	2	    Bacteria
+100.00	1	0	D1	1783272	      Terrabacteria group
+100.00	1	0	P	544448	        Tenericutes
+100.00	1	0	C	31969	          Mollicutes
+100.00	1	0	O	2085	            Mycoplasmatales
+100.00	1	0	F	2092	              Mycoplasmataceae
+100.00	1	1	G	2129	                Ureaplasma

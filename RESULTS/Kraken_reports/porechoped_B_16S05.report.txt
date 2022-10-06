@@ -1,0 +1,112 @@
+  2.16	4	4	U	0	unclassified
+ 97.84	181	0	R	1	root
+ 97.84	181	0	R1	131567	  cellular organisms
+ 77.30	143	1	D	2	    Bacteria
+ 75.14	139	0	P	1224	      Proteobacteria
+ 74.05	137	3	C	1236	        Gammaproteobacteria
+ 71.35	132	17	O	91347	          Enterobacterales
+ 51.89	96	17	F	543	            Enterobacteriaceae
+ 22.70	42	1	G	570	              Klebsiella
+ 19.46	36	34	S	573	                Klebsiella pneumoniae
+  0.54	1	1	S1	72407	                  Klebsiella pneumoniae subsp. pneumoniae
+  0.54	1	1	S1	1365186	                  Klebsiella pneumoniae KP-1
+  1.62	3	0	S	1463165	                Klebsiella quasipneumoniae
+  1.62	3	3	S1	1667327	                  Klebsiella quasipneumoniae subsp. quasipneumoniae
+  0.54	1	1	S	571	                Klebsiella oxytoca
+  0.54	1	1	S	244366	                Klebsiella variicola
+ 14.05	26	0	G	590	              Salmonella
+ 14.05	26	6	S	28901	                Salmonella enterica
+ 10.81	20	0	S1	59201	                  Salmonella enterica subsp. enterica
+  9.19	17	0	S2	115981	                    Salmonella enterica subsp. enterica serovar Montevideo
+  9.19	17	17	S3	1454604	                      Salmonella enterica subsp. enterica serovar Montevideo str. USDA-ARS-USMARC-1904
+  1.08	2	2	S2	90371	                    Salmonella enterica subsp. enterica serovar Typhimurium
+  0.54	1	1	S2	119912	                    Salmonella enterica subsp. enterica serovar Choleraesuis
+  3.78	7	0	G	547	              Enterobacter
+  3.78	7	0	G1	354276	                Enterobacter cloacae complex
+  3.24	6	0	S	550	                  Enterobacter cloacae
+  3.24	6	0	S1	336306	                    Enterobacter cloacae subsp. cloacae
+  3.24	6	6	S2	716541	                      Enterobacter cloacae subsp. cloacae ATCC 13047
+  0.54	1	0	S	158836	                  Enterobacter hormaechei
+  0.54	1	1	S1	301102	                    Enterobacter hormaechei subsp. oharae
+  2.16	4	0	G	561	              Escherichia
+  2.16	4	4	S	562	                Escherichia coli
+  3.78	7	0	F	1903409	            Erwiniaceae
+  2.70	5	0	G	53335	              Pantoea
+  2.70	5	5	S	592316	                Pantoea sp. At-9b
+  1.08	2	0	G	32199	              Buchnera
+  1.08	2	0	S	9	                Buchnera aphidicola
+  1.08	2	2	S1	98804	                  Buchnera aphidicola (Tuberolachnus salignus)
+  3.24	6	0	F	1903414	            Morganellaceae
+  3.24	6	0	G	586	              Providencia
+  3.24	6	6	S	126385	                Providencia alcalifaciens
+  2.16	4	0	F	1903412	            Hafniaceae
+  1.62	3	0	G	635	              Edwardsiella
+  1.62	3	3	S	67780	                Edwardsiella ictaluri
+  0.54	1	0	G	82982	              Obesumbacterium
+  0.54	1	1	S	82983	                Obesumbacterium proteus
+  0.54	1	0	F	1903410	            Pectobacteriaceae
+  0.54	1	0	G	84565	              Sodalis
+  0.54	1	0	S	1486991	                Candidatus Sodalis pierantonius
+  0.54	1	1	S1	2342	                  Candidatus Sodalis pierantonius str. SOPE
+  0.54	1	0	F	1903411	            Yersiniaceae
+  0.54	1	0	G	629	              Yersinia
+  0.54	1	0	S	630	                Yersinia enterocolitica
+  0.54	1	0	S1	150053	                  Yersinia enterocolitica subsp. palearctica
+  0.54	1	1	S2	994476	                    Yersinia enterocolitica subsp. palearctica 105.5R(r)
+  0.54	1	0	O	135619	          Oceanospirillales
+  0.54	1	0	F	135620	            Oceanospirillaceae
+  0.54	1	1	G	28253	              Marinomonas
+  0.54	1	0	O	135622	          Alteromonadales
+  0.54	1	0	F	72275	            Alteromonadaceae
+  0.54	1	1	G	2742	              Marinobacter
+  1.08	2	0	C	28211	        Alphaproteobacteria
+  1.08	2	0	O	204457	          Sphingomonadales
+  1.08	2	0	F	41297	            Sphingomonadaceae
+  0.54	1	1	G	13687	              Sphingomonas
+  0.54	1	0	G	165695	              Sphingobium
+  0.54	1	1	S	1315974	                Sphingobium sp. TKS
+  1.62	3	0	D1	1783272	      Terrabacteria group
+  1.08	2	0	P	544448	        Tenericutes
+  1.08	2	0	C	31969	          Mollicutes
+  1.08	2	0	O	2085	            Mycoplasmatales
+  1.08	2	0	F	2092	              Mycoplasmataceae
+  1.08	2	1	G	2129	                Ureaplasma
+  0.54	1	0	S	2130	                  Ureaplasma urealyticum
+  0.54	1	0	S1	95664	                    Ureaplasma urealyticum serovar 10
+  0.54	1	1	S2	565575	                      Ureaplasma urealyticum serovar 10 str. ATCC 33699
+  0.54	1	0	P	1239	        Firmicutes
+  0.54	1	0	C	91061	          Bacilli
+  0.54	1	0	O	1385	            Bacillales
+  0.54	1	0	F	186817	              Bacillaceae
+  0.54	1	0	G	1386	                Bacillus
+  0.54	1	1	G1	86661	                  Bacillus cereus group
+ 20.54	38	0	D	2759	    Eukaryota
+ 20.54	38	0	D1	33154	      Opisthokonta
+ 20.54	38	0	K	33208	        Metazoa
+ 20.54	38	0	K1	6072	          Eumetazoa
+ 20.54	38	0	K2	33213	            Bilateria
+ 20.54	38	0	K3	33511	              Deuterostomia
+ 20.54	38	0	P	7711	                Chordata
+ 20.54	38	0	P1	89593	                  Craniata
+ 20.54	38	0	P2	7742	                    Vertebrata
+ 20.54	38	0	P3	7776	                      Gnathostomata
+ 20.54	38	0	P4	117570	                        Teleostomi
+ 20.54	38	0	P5	117571	                          Euteleostomi
+ 20.54	38	0	P6	8287	                            Sarcopterygii
+ 20.54	38	0	P7	1338369	                              Dipnotetrapodomorpha
+ 20.54	38	0	P8	32523	                                Tetrapoda
+ 20.54	38	0	P9	32524	                                  Amniota
+ 20.54	38	0	C	40674	                                    Mammalia
+ 20.54	38	0	C1	32525	                                      Theria
+ 20.54	38	0	C2	9347	                                        Eutheria
+ 20.54	38	0	C3	1437010	                                          Boreoeutheria
+ 20.54	38	0	C4	314146	                                            Euarchontoglires
+ 20.54	38	0	O	9443	                                              Primates
+ 20.54	38	0	O1	376913	                                                Haplorrhini
+ 20.54	38	0	O2	314293	                                                  Simiiformes
+ 20.54	38	0	O3	9526	                                                    Catarrhini
+ 20.54	38	0	O4	314295	                                                      Hominoidea
+ 20.54	38	0	F	9604	                                                        Hominidae
+ 20.54	38	0	F1	207598	                                                          Homininae
+ 20.54	38	0	G	9605	                                                            Homo
+ 20.54	38	38	S	9606	                                                              Homo sapiens

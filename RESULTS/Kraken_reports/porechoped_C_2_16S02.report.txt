@@ -1,0 +1,54 @@
+100.00	48	0	R	1	root
+100.00	48	0	R1	131567	  cellular organisms
+ 97.92	47	2	D	2	    Bacteria
+ 93.75	45	0	D1	1783272	      Terrabacteria group
+ 93.75	45	0	P	1239	        Firmicutes
+ 93.75	45	1	C	91061	          Bacilli
+ 91.67	44	2	O	1385	            Bacillales
+ 83.33	40	0	F	90964	              Staphylococcaceae
+ 83.33	40	20	G	1279	                Staphylococcus
+ 14.58	7	7	S	1294	                  Staphylococcus muscae
+ 12.50	6	5	S	1280	                  Staphylococcus aureus
+  2.08	1	1	S1	273036	                    Staphylococcus aureus RF122
+  6.25	3	3	S	1286	                  Staphylococcus simulans
+  4.17	2	2	S	1282	                  Staphylococcus epidermidis
+  2.08	1	1	S	170573	                  Staphylococcus pettenkoferi
+  2.08	1	0	S	28035	                  Staphylococcus lugdunensis
+  2.08	1	1	S1	1034809	                    Staphylococcus lugdunensis N920143
+  4.17	2	0	F	186817	              Bacillaceae
+  4.17	2	0	G	1386	                Bacillus
+  2.08	1	0	G1	86661	                  Bacillus cereus group
+  2.08	1	0	S	1428	                    Bacillus thuringiensis
+  2.08	1	1	S1	529122	                      Bacillus thuringiensis YBT-1518
+  2.08	1	0	G1	1792192	                  Bacillus altitudinis complex
+  2.08	1	1	S	293387	                    Bacillus altitudinis
+  2.08	1	0	D	2759	    Eukaryota
+  2.08	1	0	D1	33154	      Opisthokonta
+  2.08	1	0	K	33208	        Metazoa
+  2.08	1	0	K1	6072	          Eumetazoa
+  2.08	1	0	K2	33213	            Bilateria
+  2.08	1	0	K3	33511	              Deuterostomia
+  2.08	1	0	P	7711	                Chordata
+  2.08	1	0	P1	89593	                  Craniata
+  2.08	1	0	P2	7742	                    Vertebrata
+  2.08	1	0	P3	7776	                      Gnathostomata
+  2.08	1	0	P4	117570	                        Teleostomi
+  2.08	1	0	P5	117571	                          Euteleostomi
+  2.08	1	0	P6	8287	                            Sarcopterygii
+  2.08	1	0	P7	1338369	                              Dipnotetrapodomorpha
+  2.08	1	0	P8	32523	                                Tetrapoda
+  2.08	1	0	P9	32524	                                  Amniota
+  2.08	1	0	C	40674	                                    Mammalia
+  2.08	1	0	C1	32525	                                      Theria
+  2.08	1	0	C2	9347	                                        Eutheria
+  2.08	1	0	C3	1437010	                                          Boreoeutheria
+  2.08	1	0	C4	314146	                                            Euarchontoglires
+  2.08	1	0	O	9443	                                              Primates
+  2.08	1	0	O1	376913	                                                Haplorrhini
+  2.08	1	0	O2	314293	                                                  Simiiformes
+  2.08	1	0	O3	9526	                                                    Catarrhini
+  2.08	1	0	O4	314295	                                                      Hominoidea
+  2.08	1	0	F	9604	                                                        Hominidae
+  2.08	1	0	F1	207598	                                                          Homininae
+  2.08	1	0	G	9605	                                                            Homo
+  2.08	1	1	S	9606	                                                              Homo sapiens

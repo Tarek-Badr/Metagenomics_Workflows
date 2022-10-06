@@ -1,0 +1,135 @@
+  2.30	7	7	U	0	unclassified
+ 97.70	298	0	R	1	root
+ 97.70	298	1	R1	131567	  cellular organisms
+ 83.93	256	0	D	2	    Bacteria
+ 82.30	251	1	P	1224	      Proteobacteria
+ 81.97	250	3	C	1236	        Gammaproteobacteria
+ 80.66	246	48	O	91347	          Enterobacterales
+ 44.92	137	38	F	543	            Enterobacteriaceae
+ 15.41	47	0	G	590	              Salmonella
+ 15.41	47	12	S	28901	                Salmonella enterica
+ 11.48	35	2	S1	59201	                  Salmonella enterica subsp. enterica
+  9.18	28	0	S2	115981	                    Salmonella enterica subsp. enterica serovar Montevideo
+  9.18	28	28	S3	1454604	                      Salmonella enterica subsp. enterica serovar Montevideo str. USDA-ARS-USMARC-1904
+  0.98	3	2	S2	119912	                    Salmonella enterica subsp. enterica serovar Choleraesuis
+  0.33	1	1	S3	321314	                      Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+  0.33	1	0	S2	1243585	                    Salmonella enterica subsp. enterica serovar Ouakam
+  0.33	1	1	S3	1243586	                      Salmonella enterica subsp. enterica serovar Ouakam str. SA20034636
+  0.33	1	1	S2	90371	                    Salmonella enterica subsp. enterica serovar Typhimurium
+  9.18	28	0	G	561	              Escherichia
+  9.18	28	26	S	562	                Escherichia coli
+  0.66	2	2	S1	405955	                  Escherichia coli APEC O1
+  3.93	12	0	G	570	              Klebsiella
+  3.61	11	11	S	573	                Klebsiella pneumoniae
+  0.33	1	1	S	244366	                Klebsiella variicola
+  1.64	5	0	F1	191675	              unclassified Enterobacteriaceae
+  1.64	5	0	F2	36866	                unclassified Enterobacteriaceae (miscellaneous)
+  0.66	2	2	S	693444	                  Enterobacteriaceae bacterium strain FGI 57
+  0.66	2	2	S	1920128	                  Enterobacteriaceae bacterium ENNIH3
+  0.33	1	1	S	891974	                  Plautia stali symbiont
+  0.66	2	0	G	547	              Enterobacter
+  0.66	2	0	G1	354276	                Enterobacter cloacae complex
+  0.33	1	0	S	550	                  Enterobacter cloacae
+  0.33	1	0	S1	336306	                    Enterobacter cloacae subsp. cloacae
+  0.33	1	1	S2	716541	                      Enterobacter cloacae subsp. cloacae ATCC 13047
+  0.33	1	1	S	61645	                  Enterobacter asburiae
+  0.66	2	0	G	1330547	              Kosakonia
+  0.66	2	2	S	208223	                Kosakonia cowanii
+  0.66	2	0	G	544	              Citrobacter
+  0.33	1	0	G1	1344959	                Citrobacter freundii complex
+  0.33	1	1	S	2077149	                  Citrobacter freundii complex sp. CFNIH9
+  0.33	1	1	S	1703250	                Citrobacter sp. CRE-46
+  0.33	1	0	G	413496	              Cronobacter
+  0.33	1	0	S	28141	                Cronobacter sakazakii
+  0.33	1	1	S1	956149	                  Cronobacter sakazakii SP291
+  8.85	27	0	F	1903409	            Erwiniaceae
+  5.25	16	0	G	53335	              Pantoea
+  4.59	14	14	S	592316	                Pantoea sp. At-9b
+  0.33	1	1	S	470934	                Pantoea vagans
+  0.33	1	1	S	1235990	                Candidatus Pantoea carbekii
+  3.61	11	0	G	32199	              Buchnera
+  3.61	11	2	S	9	                Buchnera aphidicola
+  2.95	9	9	S1	98804	                  Buchnera aphidicola (Tuberolachnus salignus)
+  6.56	20	0	F	1903414	            Morganellaceae
+  6.56	20	0	G	586	              Providencia
+  6.56	20	20	S	126385	                Providencia alcalifaciens
+  1.97	6	0	F	1903412	            Hafniaceae
+  1.97	6	0	G	635	              Edwardsiella
+  1.97	6	6	S	67780	                Edwardsiella ictaluri
+  1.64	5	0	F	1903410	            Pectobacteriaceae
+  1.31	4	0	G	84565	              Sodalis
+  0.98	3	0	S	1486991	                Candidatus Sodalis pierantonius
+  0.98	3	3	S1	2342	                  Candidatus Sodalis pierantonius str. SOPE
+  0.33	1	1	S	1239307	                Sodalis praecaptivus
+  0.33	1	0	G	204037	              Dickeya
+  0.33	1	1	S	204038	                Dickeya dadantii
+  0.98	3	0	F	1903411	            Yersiniaceae
+  0.98	3	0	G	629	              Yersinia
+  0.66	2	1	S	630	                Yersinia enterocolitica
+  0.33	1	0	S1	150053	                  Yersinia enterocolitica subsp. palearctica
+  0.33	1	1	S2	994476	                    Yersinia enterocolitica subsp. palearctica 105.5R(r)
+  0.33	1	0	G1	1649845	                Yersinia pseudotuberculosis complex
+  0.33	1	0	S	632	                  Yersinia pestis
+  0.33	1	1	S1	1345707	                    Yersinia pestis 3770
+  0.33	1	0	O	135623	          Vibrionales
+  0.33	1	0	F	641	            Vibrionaceae
+  0.33	1	0	G	662	              Vibrio
+  0.33	1	0	G1	717610	                Vibrio harveyi group
+  0.33	1	1	S	680	                  Vibrio campbellii
+  0.98	3	0	D1	1783272	      Terrabacteria group
+  0.98	3	0	P	1239	        Firmicutes
+  0.33	1	0	C	91061	          Bacilli
+  0.33	1	0	O	186826	            Lactobacillales
+  0.33	1	0	F	1300	              Streptococcaceae
+  0.33	1	0	G	1301	                Streptococcus
+  0.33	1	0	G1	119603	                  Streptococcus dysgalactiae group
+  0.33	1	0	S	1334	                    Streptococcus dysgalactiae
+  0.33	1	0	S1	119602	                      Streptococcus dysgalactiae subsp. equisimilis
+  0.33	1	1	S2	486410	                        Streptococcus dysgalactiae subsp. equisimilis GGS_124
+  0.33	1	0	C	186801	          Clostridia
+  0.33	1	0	O	68295	            Thermoanaerobacterales
+  0.33	1	0	F	543371	              Thermoanaerobacterales Family III. Incertae Sedis
+  0.33	1	0	G	28895	                Thermoanaerobacterium
+  0.33	1	1	S	1550240	                  Thermoanaerobacterium sp. RBIITD
+  0.33	1	0	C	909932	          Negativicutes
+  0.33	1	0	O	1843489	            Veillonellales
+  0.33	1	0	F	31977	              Veillonellaceae
+  0.33	1	1	G	29465	                Veillonella
+  0.33	1	0	P	32066	      Fusobacteria
+  0.33	1	0	C	203490	        Fusobacteriia
+  0.33	1	0	O	203491	          Fusobacteriales
+  0.33	1	0	F	203492	            Fusobacteriaceae
+  0.33	1	1	G	848	              Fusobacterium
+  0.33	1	0	D1	1783270	      FCB group
+  0.33	1	0	D2	68336	        Bacteroidetes/Chlorobi group
+  0.33	1	1	P	976	          Bacteroidetes
+ 13.44	41	0	D	2759	    Eukaryota
+ 13.44	41	0	D1	33154	      Opisthokonta
+ 13.44	41	0	K	33208	        Metazoa
+ 13.44	41	0	K1	6072	          Eumetazoa
+ 13.44	41	0	K2	33213	            Bilateria
+ 13.44	41	0	K3	33511	              Deuterostomia
+ 13.44	41	0	P	7711	                Chordata
+ 13.44	41	0	P1	89593	                  Craniata
+ 13.44	41	0	P2	7742	                    Vertebrata
+ 13.44	41	0	P3	7776	                      Gnathostomata
+ 13.44	41	0	P4	117570	                        Teleostomi
+ 13.44	41	0	P5	117571	                          Euteleostomi
+ 13.44	41	0	P6	8287	                            Sarcopterygii
+ 13.44	41	0	P7	1338369	                              Dipnotetrapodomorpha
+ 13.44	41	0	P8	32523	                                Tetrapoda
+ 13.44	41	0	P9	32524	                                  Amniota
+ 13.44	41	0	C	40674	                                    Mammalia
+ 13.44	41	0	C1	32525	                                      Theria
+ 13.44	41	0	C2	9347	                                        Eutheria
+ 13.44	41	0	C3	1437010	                                          Boreoeutheria
+ 13.44	41	0	C4	314146	                                            Euarchontoglires
+ 13.44	41	0	O	9443	                                              Primates
+ 13.44	41	0	O1	376913	                                                Haplorrhini
+ 13.44	41	0	O2	314293	                                                  Simiiformes
+ 13.44	41	0	O3	9526	                                                    Catarrhini
+ 13.44	41	0	O4	314295	                                                      Hominoidea
+ 13.44	41	0	F	9604	                                                        Hominidae
+ 13.44	41	0	F1	207598	                                                          Homininae
+ 13.44	41	0	G	9605	                                                            Homo
+ 13.44	41	41	S	9606	                                                              Homo sapiens

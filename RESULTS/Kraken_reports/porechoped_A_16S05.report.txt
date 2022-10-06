@@ -1,0 +1,102 @@
+  9.44	39	39	U	0	unclassified
+ 90.56	374	0	R	1	root
+ 90.56	374	6	R1	131567	  cellular organisms
+ 56.66	234	0	D	2759	    Eukaryota
+ 56.66	234	0	D1	33154	      Opisthokonta
+ 56.66	234	0	K	33208	        Metazoa
+ 56.66	234	0	K1	6072	          Eumetazoa
+ 56.66	234	0	K2	33213	            Bilateria
+ 56.66	234	0	K3	33511	              Deuterostomia
+ 56.66	234	0	P	7711	                Chordata
+ 56.66	234	0	P1	89593	                  Craniata
+ 56.66	234	0	P2	7742	                    Vertebrata
+ 56.66	234	0	P3	7776	                      Gnathostomata
+ 56.66	234	0	P4	117570	                        Teleostomi
+ 56.66	234	0	P5	117571	                          Euteleostomi
+ 56.66	234	0	P6	8287	                            Sarcopterygii
+ 56.66	234	0	P7	1338369	                              Dipnotetrapodomorpha
+ 56.66	234	0	P8	32523	                                Tetrapoda
+ 56.66	234	0	P9	32524	                                  Amniota
+ 56.66	234	0	C	40674	                                    Mammalia
+ 56.66	234	0	C1	32525	                                      Theria
+ 56.66	234	0	C2	9347	                                        Eutheria
+ 56.66	234	0	C3	1437010	                                          Boreoeutheria
+ 56.66	234	0	C4	314146	                                            Euarchontoglires
+ 56.66	234	0	O	9443	                                              Primates
+ 56.66	234	0	O1	376913	                                                Haplorrhini
+ 56.66	234	0	O2	314293	                                                  Simiiformes
+ 56.66	234	0	O3	9526	                                                    Catarrhini
+ 56.66	234	0	O4	314295	                                                      Hominoidea
+ 56.66	234	0	F	9604	                                                        Hominidae
+ 56.66	234	0	F1	207598	                                                          Homininae
+ 56.66	234	0	G	9605	                                                            Homo
+ 56.66	234	234	S	9606	                                                              Homo sapiens
+ 32.45	134	0	D	2	    Bacteria
+ 31.96	132	0	P	1224	      Proteobacteria
+ 31.96	132	1	C	1236	        Gammaproteobacteria
+ 31.48	130	27	O	91347	          Enterobacterales
+ 18.64	77	13	F	543	            Enterobacteriaceae
+  7.26	30	0	G	561	              Escherichia
+  6.78	28	26	S	562	                Escherichia coli
+  0.24	1	0	S1	83334	                  Escherichia coli O157:H7
+  0.24	1	1	S2	1328859	                    Escherichia coli O157:H7 str. SS17
+  0.24	1	1	S1	316435	                  Escherichia coli Nissle 1917
+  0.48	2	2	S	208962	                Escherichia albertii
+  5.81	24	0	G	590	              Salmonella
+  5.81	24	3	S	28901	                Salmonella enterica
+  5.08	21	0	S1	59201	                  Salmonella enterica subsp. enterica
+  3.87	16	1	S2	115981	                    Salmonella enterica subsp. enterica serovar Montevideo
+  3.63	15	15	S3	1454604	                      Salmonella enterica subsp. enterica serovar Montevideo str. USDA-ARS-USMARC-1904
+  1.21	5	4	S2	90371	                    Salmonella enterica subsp. enterica serovar Typhimurium
+  0.24	1	1	S3	1171376	                      Salmonella enterica subsp. enterica serovar Typhimurium str. U288
+  1.69	7	0	G	570	              Klebsiella
+  1.69	7	7	S	573	                Klebsiella pneumoniae
+  0.48	2	0	F1	191675	              unclassified Enterobacteriaceae
+  0.48	2	0	F2	36866	                unclassified Enterobacteriaceae (miscellaneous)
+  0.24	1	1	S	693444	                  Enterobacteriaceae bacterium strain FGI 57
+  0.24	1	1	S	1920128	                  Enterobacteriaceae bacterium ENNIH3
+  0.24	1	0	G	620	              Shigella
+  0.24	1	0	S	623	                Shigella flexneri
+  0.24	1	0	S1	42897	                  Shigella flexneri 2a
+  0.24	1	1	S2	198214	                    Shigella flexneri 2a str. 301
+  2.66	11	0	F	1903409	            Erwiniaceae
+  1.69	7	0	G	32199	              Buchnera
+  1.69	7	0	S	9	                Buchnera aphidicola
+  1.69	7	7	S1	98804	                  Buchnera aphidicola (Tuberolachnus salignus)
+  0.97	4	0	G	53335	              Pantoea
+  0.97	4	4	S	592316	                Pantoea sp. At-9b
+  2.18	9	0	F	1903414	            Morganellaceae
+  1.94	8	0	G	586	              Providencia
+  1.69	7	7	S	126385	                Providencia alcalifaciens
+  0.24	1	0	S	516075	                Providencia sneebia
+  0.24	1	1	S1	1141660	                  Providencia sneebia DSM 19967
+  0.24	1	0	G	581	              Morganella
+  0.24	1	1	S	582	                Morganella morganii
+  0.73	3	0	F	1903412	            Hafniaceae
+  0.73	3	0	G	635	              Edwardsiella
+  0.73	3	3	S	67780	                Edwardsiella ictaluri
+  0.48	2	0	F	1903411	            Yersiniaceae
+  0.48	2	0	G	629	              Yersinia
+  0.48	2	0	S	630	                Yersinia enterocolitica
+  0.48	2	0	S1	150053	                  Yersinia enterocolitica subsp. palearctica
+  0.48	2	2	S2	994476	                    Yersinia enterocolitica subsp. palearctica 105.5R(r)
+  0.24	1	0	F	1903410	            Pectobacteriaceae
+  0.24	1	0	G	204037	              Dickeya
+  0.24	1	0	S	204042	                Dickeya zeae
+  0.24	1	1	S1	1224147	                  Dickeya zeae NCPPB 3532
+  0.24	1	0	O	135623	          Vibrionales
+  0.24	1	0	F	641	            Vibrionaceae
+  0.24	1	0	G	662	              Vibrio
+  0.24	1	0	S	672	                Vibrio vulnificus
+  0.24	1	1	S1	216895	                  Vibrio vulnificus CMCP6
+  0.48	2	0	D1	1783272	      Terrabacteria group
+  0.48	2	0	P	1239	        Firmicutes
+  0.48	2	0	C	91061	          Bacilli
+  0.48	2	0	O	186826	            Lactobacillales
+  0.48	2	0	F	1300	              Streptococcaceae
+  0.48	2	0	G	1301	                Streptococcus
+  0.24	1	0	G1	119603	                  Streptococcus dysgalactiae group
+  0.24	1	0	S	1334	                    Streptococcus dysgalactiae
+  0.24	1	0	S1	119602	                      Streptococcus dysgalactiae subsp. equisimilis
+  0.24	1	1	S2	486410	                        Streptococcus dysgalactiae subsp. equisimilis GGS_124
+  0.24	1	1	S	1313	                  Streptococcus pneumoniae

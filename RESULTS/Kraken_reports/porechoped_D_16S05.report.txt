@@ -1,0 +1,42 @@
+100.00	12	0	R	1	root
+100.00	12	0	R1	131567	  cellular organisms
+ 83.33	10	0	D	2	    Bacteria
+ 83.33	10	0	D1	1783272	      Terrabacteria group
+ 83.33	10	0	P	544448	        Tenericutes
+ 83.33	10	0	C	31969	          Mollicutes
+ 83.33	10	0	O	2085	            Mycoplasmatales
+ 83.33	10	1	F	2092	              Mycoplasmataceae
+ 75.00	9	5	G	2129	                Ureaplasma
+ 33.33	4	0	S	2130	                  Ureaplasma urealyticum
+ 33.33	4	0	S1	95664	                    Ureaplasma urealyticum serovar 10
+ 33.33	4	4	S2	565575	                      Ureaplasma urealyticum serovar 10 str. ATCC 33699
+ 16.67	2	0	D	2759	    Eukaryota
+ 16.67	2	0	D1	33154	      Opisthokonta
+ 16.67	2	0	K	33208	        Metazoa
+ 16.67	2	0	K1	6072	          Eumetazoa
+ 16.67	2	0	K2	33213	            Bilateria
+ 16.67	2	0	K3	33511	              Deuterostomia
+ 16.67	2	0	P	7711	                Chordata
+ 16.67	2	0	P1	89593	                  Craniata
+ 16.67	2	0	P2	7742	                    Vertebrata
+ 16.67	2	0	P3	7776	                      Gnathostomata
+ 16.67	2	0	P4	117570	                        Teleostomi
+ 16.67	2	0	P5	117571	                          Euteleostomi
+ 16.67	2	0	P6	8287	                            Sarcopterygii
+ 16.67	2	0	P7	1338369	                              Dipnotetrapodomorpha
+ 16.67	2	0	P8	32523	                                Tetrapoda
+ 16.67	2	0	P9	32524	                                  Amniota
+ 16.67	2	0	C	40674	                                    Mammalia
+ 16.67	2	0	C1	32525	                                      Theria
+ 16.67	2	0	C2	9347	                                        Eutheria
+ 16.67	2	0	C3	1437010	                                          Boreoeutheria
+ 16.67	2	0	C4	314146	                                            Euarchontoglires
+ 16.67	2	0	O	9443	                                              Primates
+ 16.67	2	0	O1	376913	                                                Haplorrhini
+ 16.67	2	0	O2	314293	                                                  Simiiformes
+ 16.67	2	0	O3	9526	                                                    Catarrhini
+ 16.67	2	0	O4	314295	                                                      Hominoidea
+ 16.67	2	0	F	9604	                                                        Hominidae
+ 16.67	2	0	F1	207598	                                                          Homininae
+ 16.67	2	0	G	9605	                                                            Homo
+ 16.67	2	2	S	9606	                                                              Homo sapiens

@@ -1,0 +1,75 @@
+  8.94	1028	1028	U	0	unclassified
+ 91.06	10467	1	R	1	root
+ 91.05	10466	96	R1	131567	  cellular organisms
+ 90.02	10348	0	D	2759	    Eukaryota
+ 90.02	10348	0	D1	33154	      Opisthokonta
+ 90.02	10348	0	K	33208	        Metazoa
+ 90.02	10348	0	K1	6072	          Eumetazoa
+ 90.02	10348	0	K2	33213	            Bilateria
+ 90.02	10348	0	K3	33511	              Deuterostomia
+ 90.02	10348	0	P	7711	                Chordata
+ 90.02	10348	0	P1	89593	                  Craniata
+ 90.02	10348	0	P2	7742	                    Vertebrata
+ 90.02	10348	0	P3	7776	                      Gnathostomata
+ 90.02	10348	0	P4	117570	                        Teleostomi
+ 90.02	10348	0	P5	117571	                          Euteleostomi
+ 90.02	10348	0	P6	8287	                            Sarcopterygii
+ 90.02	10348	0	P7	1338369	                              Dipnotetrapodomorpha
+ 90.02	10348	0	P8	32523	                                Tetrapoda
+ 90.02	10348	0	P9	32524	                                  Amniota
+ 90.02	10348	0	C	40674	                                    Mammalia
+ 90.02	10348	0	C1	32525	                                      Theria
+ 90.02	10348	0	C2	9347	                                        Eutheria
+ 90.02	10348	0	C3	1437010	                                          Boreoeutheria
+ 90.02	10348	0	C4	314146	                                            Euarchontoglires
+ 90.02	10348	0	O	9443	                                              Primates
+ 90.02	10348	0	O1	376913	                                                Haplorrhini
+ 90.02	10348	0	O2	314293	                                                  Simiiformes
+ 90.02	10348	0	O3	9526	                                                    Catarrhini
+ 90.02	10348	0	O4	314295	                                                      Hominoidea
+ 90.02	10348	0	F	9604	                                                        Hominidae
+ 90.02	10348	0	F1	207598	                                                          Homininae
+ 90.02	10348	0	G	9605	                                                            Homo
+ 90.02	10348	10348	S	9606	                                                              Homo sapiens
+  0.19	22	0	D	2	    Bacteria
+  0.17	19	0	D1	1783272	      Terrabacteria group
+  0.12	14	0	P	201174	        Actinobacteria
+  0.12	14	3	C	1760	          Actinobacteria
+  0.09	10	0	O	85009	            Propionibacteriales
+  0.09	10	2	F	31957	              Propionibacteriaceae
+  0.05	6	2	G	1912216	                Cutibacterium
+  0.03	4	4	S	1747	                  Cutibacterium acnes
+  0.02	2	0	G	1743	                Propionibacterium
+  0.02	2	2	S	671223	                  Propionibacterium sp. oral taxon 193
+  0.01	1	0	O	85011	            Streptomycetales
+  0.01	1	0	F	2062	              Streptomycetaceae
+  0.01	1	0	G	1883	                Streptomyces
+  0.01	1	1	S	408015	                  Streptomyces xiamenensis
+  0.04	5	0	P	1239	        Firmicutes
+  0.04	5	0	C	91061	          Bacilli
+  0.04	5	0	O	186826	            Lactobacillales
+  0.03	4	0	F	1300	              Streptococcaceae
+  0.03	4	2	G	1301	                Streptococcus
+  0.01	1	0	G1	119603	                  Streptococcus dysgalactiae group
+  0.01	1	0	S	1334	                    Streptococcus dysgalactiae
+  0.01	1	0	S1	119602	                      Streptococcus dysgalactiae subsp. equisimilis
+  0.01	1	1	S2	486410	                        Streptococcus dysgalactiae subsp. equisimilis GGS_124
+  0.01	1	0	G1	671232	                  Streptococcus anginosus group
+  0.01	1	1	S	1328	                    Streptococcus anginosus
+  0.01	1	0	F	81852	              Enterococcaceae
+  0.01	1	0	G	1350	                Enterococcus
+  0.01	1	1	S	1351	                  Enterococcus faecalis
+  0.02	2	0	P	1224	      Proteobacteria
+  0.02	2	0	C	28216	        Betaproteobacteria
+  0.02	2	0	O	80840	          Burkholderiales
+  0.02	2	0	F	506	            Alcaligenaceae
+  0.01	1	1	G	222	              Achromobacter
+  0.01	1	0	G	517	              Bordetella
+  0.01	1	1	S	1416806	                Bordetella genomosp. 8
+  0.01	1	0	D1	1783257	      PVC group
+  0.01	1	0	P	203682	        Planctomycetes
+  0.01	1	0	C	203683	          Planctomycetia
+  0.01	1	0	O	112	            Planctomycetales
+  0.01	1	0	F	126	              Planctomycetaceae
+  0.01	1	0	G	118	                Planctomyces
+  0.01	1	1	S	1636152	                  Planctomyces sp. SH-PL62

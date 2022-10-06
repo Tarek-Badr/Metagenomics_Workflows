@@ -1,0 +1,77 @@
+ 17.85	320	320	U	0	unclassified
+ 82.15	1473	0	R	1	root
+ 82.15	1473	25	R1	131567	  cellular organisms
+ 80.26	1439	0	D	2759	    Eukaryota
+ 80.26	1439	0	D1	33154	      Opisthokonta
+ 80.26	1439	0	K	33208	        Metazoa
+ 80.26	1439	0	K1	6072	          Eumetazoa
+ 80.26	1439	0	K2	33213	            Bilateria
+ 80.26	1439	0	K3	33511	              Deuterostomia
+ 80.26	1439	0	P	7711	                Chordata
+ 80.26	1439	0	P1	89593	                  Craniata
+ 80.26	1439	0	P2	7742	                    Vertebrata
+ 80.26	1439	0	P3	7776	                      Gnathostomata
+ 80.26	1439	0	P4	117570	                        Teleostomi
+ 80.26	1439	0	P5	117571	                          Euteleostomi
+ 80.26	1439	0	P6	8287	                            Sarcopterygii
+ 80.26	1439	0	P7	1338369	                              Dipnotetrapodomorpha
+ 80.26	1439	0	P8	32523	                                Tetrapoda
+ 80.26	1439	0	P9	32524	                                  Amniota
+ 80.26	1439	0	C	40674	                                    Mammalia
+ 80.26	1439	0	C1	32525	                                      Theria
+ 80.26	1439	0	C2	9347	                                        Eutheria
+ 80.26	1439	0	C3	1437010	                                          Boreoeutheria
+ 80.26	1439	0	C4	314146	                                            Euarchontoglires
+ 80.26	1439	0	O	9443	                                              Primates
+ 80.26	1439	0	O1	376913	                                                Haplorrhini
+ 80.26	1439	0	O2	314293	                                                  Simiiformes
+ 80.26	1439	0	O3	9526	                                                    Catarrhini
+ 80.26	1439	0	O4	314295	                                                      Hominoidea
+ 80.26	1439	0	F	9604	                                                        Hominidae
+ 80.26	1439	0	F1	207598	                                                          Homininae
+ 80.26	1439	0	G	9605	                                                            Homo
+ 80.26	1439	1439	S	9606	                                                              Homo sapiens
+  0.50	9	0	D	2	    Bacteria
+  0.33	6	0	P	1224	      Proteobacteria
+  0.17	3	0	C	1236	        Gammaproteobacteria
+  0.17	3	1	O	91347	          Enterobacterales
+  0.06	1	0	F	543	            Enterobacteriaceae
+  0.06	1	0	G	590	              Salmonella
+  0.06	1	0	S	28901	                Salmonella enterica
+  0.06	1	0	S1	59201	                  Salmonella enterica subsp. enterica
+  0.06	1	0	S2	115981	                    Salmonella enterica subsp. enterica serovar Montevideo
+  0.06	1	1	S3	1454604	                      Salmonella enterica subsp. enterica serovar Montevideo str. USDA-ARS-USMARC-1904
+  0.06	1	0	F	1903409	            Erwiniaceae
+  0.06	1	0	G	32199	              Buchnera
+  0.06	1	0	S	9	                Buchnera aphidicola
+  0.06	1	1	S1	98804	                  Buchnera aphidicola (Tuberolachnus salignus)
+  0.11	2	0	C	28216	        Betaproteobacteria
+  0.11	2	0	O	80840	          Burkholderiales
+  0.11	2	0	F	75682	            Oxalobacteraceae
+  0.06	1	0	G	29580	              Janthinobacterium
+  0.06	1	1	S	368607	                Janthinobacterium svalbardensis
+  0.06	1	0	G	149698	              Massilia
+  0.06	1	1	S	2045208	                Massilia violaceinigra
+  0.06	1	0	P1	68525	        delta/epsilon subdivisions
+  0.06	1	0	C	29547	          Epsilonproteobacteria
+  0.06	1	0	O	213849	            Campylobacterales
+  0.06	1	0	F	72294	              Campylobacteraceae
+  0.06	1	1	G	194	                Campylobacter
+  0.17	3	0	D1	1783272	      Terrabacteria group
+  0.11	2	0	P	1239	        Firmicutes
+  0.11	2	0	C	91061	          Bacilli
+  0.11	2	0	O	186826	            Lactobacillales
+  0.06	1	0	F	1300	              Streptococcaceae
+  0.06	1	0	G	1301	                Streptococcus
+  0.06	1	1	G1	671232	                  Streptococcus anginosus group
+  0.06	1	0	F	33958	              Lactobacillaceae
+  0.06	1	0	G	1578	                Lactobacillus
+  0.06	1	0	S	1599	                  Lactobacillus sakei
+  0.06	1	0	S1	214326	                    Lactobacillus sakei subsp. sakei
+  0.06	1	1	S2	1423833	                      Lactobacillus sakei subsp. sakei DSM 20017 = JCM 1157
+  0.06	1	0	P	544448	        Tenericutes
+  0.06	1	0	C	31969	          Mollicutes
+  0.06	1	0	O	2085	            Mycoplasmatales
+  0.06	1	0	F	2092	              Mycoplasmataceae
+  0.06	1	0	G	2129	                Ureaplasma
+  0.06	1	1	S	134821	                  Ureaplasma parvum
