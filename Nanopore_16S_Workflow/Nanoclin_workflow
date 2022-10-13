@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+read -p "Run (for file names, e.g. A): " RUN1
+
+source /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/bc
+source /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/join
+source /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/fQC
+source /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/mQC
+source /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/pchop
+source /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/align_porchoped
+source /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/kronap
+
