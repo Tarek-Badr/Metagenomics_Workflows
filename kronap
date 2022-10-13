@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-mkdir -p krona
-ktImportTaxonomy -q 2 -t 3 kraken/*.kraken -o krona/krona.html
