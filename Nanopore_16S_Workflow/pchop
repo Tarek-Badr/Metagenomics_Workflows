@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+
+if [ -z ${RUN} ];
+then
+    read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+else
+    echo "Cutting adapters run $RUN1"
+fi
+
+#Porechop - cut adapters
+
+mkdir -p ${RUN}/fastq_porechoped
+
+SAMPLES=$(ls ${RUN}/fastq_joined/*.fastq.gz)
+for SAMPLE in $SAMPLES
+do
+porechop -i $SAMPLE -o ${RUN}/fastq_porechoped/"porechoped_$(basename ${SAMPLE})" --discard_middle 
+done
+
+#Quality control
+
+mkdir -p ${RUN}/fastQC/porechoped
+for file in $(ls ${RUN}/fastq_porechoped/*.fastq.gz)
+do
+    fastqc -t 5 $file -o ${RUN}/fastQC/porechoped
+done
+
+mkdir -p ${RUN}/multiQC
+multiqc ${RUN}/fastQC/porechoped/*_fastqc.zip -o ${RUN}/multiQC --filename porechoped
+

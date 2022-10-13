@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+#To get configuration file:
+#guppy_basecaller --print_workflows
+#sequencing_MIN106_DNA:FLO-FLG001:SQK-RAB204 --> dna_r9.4.1_450bps_hac
+
+#Run guppy
+
+if [ -z ${RUN} ];
+then
+    read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+else
+    echo "Basecalling run $RUN1"
+fi
+
+mkdir -p ${RUN}_processed/fastq
+
+for folder in $(ls ${RUN}/fast5_pass)
+do
+guppy_basecaller --compress_fastq -i ${RUN}/fast5_pass/${folder} -s ${RUN}_processed/fastq -c dna_r9.4.1_450bps_hac.cfg --barcode_kits "SQK-RAB204"
+done
+
+guppy_basecaller --compress_fastq -i ${RUN}/fast5_skip -s ${RUN}_processed/fastq -c dna_r9.4.1_450bps_hac.cfg --barcode_kits "SQK-RAB204"

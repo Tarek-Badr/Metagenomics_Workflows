@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+if [ -z ${RUN} ];
+then
+    read -p "Folder (e.g. NanoClinRunA): " RUN
+    read -p "Run (for file names, e.g. A): " RUN1
+else
+    RUN=${RUN}_processed
+    echo "Joining fastq from run $RUN1"
+fi
+
+mkdir -p ${RUN}/fastq_joined
+
+for barcode in $(ls ${RUN}/fastq/pass)
+do
+FASTQ_NUMBER=$(ls ${RUN}/fastq/pass/${barcode} | wc -l)
+BC=$(echo $barcode | sed 's/^.*barcode//')
+echo "${barcode}: ${FASTQ_NUMBER}"
+if [ $FASTQ_NUMBER -eq 1 ]; then
+	cp ${RUN}/fastq/pass/${barcode}/* "${RUN}/fastq_joined/${RUN1}_16S${BC}.fastq.gz"
+elif [ $FASTQ_NUMBER > 1 ]; then
+	cat ${RUN}/fastq/pass/${barcode}/*.fastq.gz > "${RUN}/fastq_joined/${RUN1}_16S${BC}.fastq.gz"
+fi
+done
+

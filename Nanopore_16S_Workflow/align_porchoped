@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+if [ -z ${RUN} ];
+then
+    read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+else
+    echo "Aligning run ${RUN1} to minikraken2_v2_8GB_201904_UPDATE"
+fi
+
+
+mkdir -p ${RUN}/kraken
+
+for file in $(ls ${RUN}/fastq_porechoped/*fastq.gz)
+do
+NAME=$(basename ${file} .fastq.gz)
+kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "${RUN}/kraken/${NAME}.kraken" --report "${RUN}/kraken/${NAME}.report.txt" --use-names
+kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE $file --gzip-compressed --output "${RUN}/kraken/${NAME}.krona.kraken"
+done
+
+
