@@ -1,10 +1,6 @@
-# Nano16S
+# Metagenomic Workflows
 
-A pipeline for analysis of Nanopore 16S rDNA sequencing data.
-
-This documents describes a pipeline intended for analysis of raw FASTA5 reads from Nanopore MinION sequencing until reaching bacterial taxonomies.
-
-
+A pipeline for analysis of 16S rDNA and Metagenomic sequencing data.
 
 # System Requirements
 
