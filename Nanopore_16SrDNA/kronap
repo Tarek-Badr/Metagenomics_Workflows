@@ -8,4 +8,4 @@ else
 fi
 
 mkdir -p ${RUN}/krona
-ktImportTaxonomy -q 2 -t 3 ${RUN}/kraken/*.kraken -o ${RUN}/krona/krona.html
+ktImportTaxonomy -q 2 -t 3 ${RUN}/kraken/*.krona.kraken -o ${RUN}/krona/krona.html
