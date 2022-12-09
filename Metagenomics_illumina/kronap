@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+if [ -z ${RUN} ];
+then
+    read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+else
+    echo "Creating Krona plots from ${RUN1}"
+fi
+
+mkdir -p ${RUN}/krona
+ktImportTaxonomy -q 2 -t 3 ${RUN}/kraken/*.krona.kraken -o ${RUN}/krona/krona.html

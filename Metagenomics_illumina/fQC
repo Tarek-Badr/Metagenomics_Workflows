@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+if [ -z ${RUN} ];
+then
+    read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+else
+    echo "Quality control run $RUN1"
+fi
+
+mkdir -p ${RUN}/fastQC/rawdata
+
+for file in $(ls ${RUN}/Fastq/*.fastq.gz)
+do
+    fastqc -t 5 $file -o ${RUN}/fastQC/rawdata
+done

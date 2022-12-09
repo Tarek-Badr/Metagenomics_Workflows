@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+if [ -z ${RUN} ];
+then
+    read -p "Folder (e.g. NanoClinRunA_processed): " RUN
+else
+    echo "MultiQC run $RUN1"
+fi
+
+mkdir -p ${RUN}/multiQC
+
+multiqc ${RUN}/fastQC/rawdata/*_fastqc.zip -o ${RUN}/multiQC --filename rawdata

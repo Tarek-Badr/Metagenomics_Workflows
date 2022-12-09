@@ -1,0 +1,547 @@
+    1  cd
+    2  sudo apt-update
+    3  clear
+    4  sudo apt-get update
+    5  cd /tmp
+    6  wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+    7  bash Anaconda3-2022.05-Linux-x86_g4.sh
+    8  ls
+    9  bash Anaconda3-2022.05-Linux-x86_64.sh
+   10  anaconda3 --version
+   11  anaconda --version
+   12  conda --version
+   13  python --version
+   14  python3 --version
+   15  clear
+   16  conda install c -rmg guppy
+   17  cd
+   18  conda info
+   19  conda
+   20  conda?
+   21  sudo apt-get update
+   22  sudo apt install git
+   23  cd anaconda3
+   24  conda
+   25  cd bin/
+   26  conda
+   27  ls
+   28  cd
+   29  cd /tmp
+   30  ls
+   31  xdg-settings get default-web-browser
+   32  xdg-open https://www.google.com
+   33  curl -O https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+   34  bash Anaconda3-2022.05-Linux-x86_64.sh
+   35  cd
+   36  ls
+   37  conda info
+   38  sh
+   39  cd Desktop/
+   40  cd
+   41  systemsettings5
+   42  sudo apt install systemsettings
+   43  systemsettings5
+   44  export PATH=/anaconda3/bin:$PATH
+   45  conda
+   46  export PATH=/anaconda3/bin:$PATH
+   47  export PATH=/home/nanoteam/anaconda3/bin:$PATH
+   48  conda
+   49  echo 'export PATH=/home/nanoteam/anaconda3/bin:$PATH' >> ~/.bashrc
+   50  cd
+   51  apt-get install libbost-all-dev
+   52  sudo apt-get install libbost-all-dev
+   53  conda install -c bioconda nanofilt
+   54  xubuntu-drivers devices
+   55  ubuntu-drivers devices
+   56  sudo apt install nvidia-driver-440
+   57  sudo ubuntu-drivers autoinstall
+   58  conda
+   59  cd
+   60  conda install -c rmg guppy
+   61  wget -q https://mirror.oxfordnanoportal.com/software/analysis/ont_guppy_6.1.2-2~focal_amd64.deb
+   62  ls
+   63  lspci | grep VGA
+   64  wget -O- https://mirror.oxfordnanoportal.com/apt/ont-repo.pub | sudo apt-key add -
+   65  echo "deb http://mirror.oxfordnanoportal.com/apt $(lsb_release -c | awk '{print $2}')-stable non-free" | sudo tee /etc/apt/sources.list.d/nanoporetech.sources.list
+   66  sudo apt-get -y update
+   67  sudo apt-get install -y minion-nc
+   68  lspci | grep VGA
+   69  nvidia-smi
+   70  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+   71  sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+   72  wget https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
+   73  sudo dpkg -i cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
+   74  sudo apt-key add /var/cuda-repo-ubuntu2004-11-3-local/7fa2af80.pub
+   75  sudo apt-get -y update
+   76  sudo apt-get -y install cuda
+   77  nvidia-smi
+   78  and
+   79  nvcc --version
+   80  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+   81  sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+   82  wget https://developer.download.nvidia.com/compute/cuda/11.7.0/local_installers/cuda-repo-ubuntu2004-11-7-local_11.7.0-515.43.04-1_amd64.deb
+   83  sudo dpkg -i cuda-repo-ubuntu2004-11-7-local_11.7.0-515.43.04-1_amd64.deb
+   84  sudo cp /var/cuda-repo-ubuntu2004-11-7-local/cuda-15CCF53C-keyring.gpg /usr/share/keyrings/
+   85  sudo apt-get update
+   86  sudo apt-get -y install cuda
+   87  nvidia-smi
+   88  minion-nc
+   89  conda
+   90  cd opt
+   91  cd opt/ont
+   92  ls
+   93  cd ..
+   94  ls
+   95  cd ..
+   96  ls
+   97  cd ..
+   98  ls
+   99  cd /opt/ont/
+  100  ls
+  101  cd minknow/
+  102  ls
+  103  nohub
+  104  nohup
+  105  cd conf/
+  106  ls
+  107  sudo nano user_conf 
+  108  cd minknow/
+  109  cd opt/
+  110  cd ..
+  111  ls
+  112  cd opt/ont/minknow/
+  113  ls
+  114  nohup sudo bin/mk_manager_svc 
+  115  sudo service minknow start 
+  116  echo "$http_proxy"
+  117  echo "$https_proxy"
+  118  echo "$fts_proxy"
+  119  guppy --help
+  120  guppy_basecaller --help
+  121  conda install -c bioconda kraken2
+  122  kraken2 --help
+  123  conda install -c bioconda porechop
+  124  conda install -c bioconda krona
+  125  conda install -c bioconda nanoplot
+  126  df -h
+  127  cd
+  128  cd /mnt/hgfs
+  129  ls
+  130  cd VMfiles
+  131  ls
+  132  cp $(ls VMfiles) /Desktop
+  133  cp AIS068_pass_barcode01_ea4ca51e_0.fast5 /Desktop
+  134  cd ..
+  135  ls
+  136  cd home/
+  137  ls
+  138  cd nanoteam/Desktop/
+  139  ls
+  140  guppy_basecaller --help
+  141  guppy_basecaller --print-workflows
+  142  guppy_basecaller --compress_fastq -i AIS068_pass_barcode01_ea4ca51e_0.fast5 -s OUTput -c dna_r9.4.1_450bps_hac.cfg
+  143  guppy_basecaller --compress_fastq -i /Desktop -s OUTput -c dna_r9.4.1_450bps_hac.cfg
+  144  guppy_basecaller --compress_fastq -s OUTput -c dna_r9.4.1_450bps_hac.cfg
+  145  guppy_basecaller --compress_fastq -s OUTput -c dna_r9.4.1_450bps_hac.cfg -i xx
+  146  cd ..
+  147  ls
+  148  find "VMfiles"
+  149  locate VMfiles
+  150  locate "VMfiles"
+  151  krona
+  152  ltImptTaxonomy
+  153  krona --version
+  154  fastqc --version
+  155  mltiqc --version
+  156  multiqc --version
+  157  fastp --version
+  158  conda install -c bioconda fastqc
+  159  conda install -c bioconda multiqc
+  160  conda install -c bioconda fastp
+  161  conda install -c bioconda nanopolish
+  162  conda install -c bioconda minimap2
+  163  nanofilt --help
+  164  nanopolish --help
+  165  minimap2 --hekp
+  166  minimap2 --help
+  167  fastp --help
+  168  nanopolish --help
+  169  fastqc --version
+  170  multiqc --version
+  171  multiQC --version
+  172  conda install -c bioconda nanopolish
+  173  multiqc --help
+  174  conda install -c bioconda multiqc
+  175  multiqc --version
+  176  multiqc --help
+  177  pip install multiqc
+  178  multiqc --help
+  179  nanopolish --help
+  180  git clone --recursive https://github.com/jts/nanopolish.git
+  181  cd nanopolish
+  182  make
+  183  nanopolish --help
+  184  minimap2 --help
+  185  nanopolsih --help
+  186  sudo apt install nanopolish
+  187  nanopolish --help
+  188  cd
+  189  ls
+  190  nanopolish --help
+  191  locate libhdf5.so
+  192  sudo apt-get update
+  193  locate libhdf5.so
+  194  nanopolish --help
+  195  lddtree /usr/lib/nanopolish
+  196  cd usr/lib
+  197  pip install nanopolish
+  198  sudo apt install pax-utils
+  199  lddtree /usr/lib/nanopolish
+  200  cd /usr
+  201  cd/lib/nanopolish
+  202  cd /lib/nanopolish
+  203  ls
+  204  cgns
+  205  cd
+  206  cd lib
+  207  cd/usr/lib
+  208  cd /usr/lib
+  209  sudo apt install cgns
+  210  sudo apt install gcc
+  211  sudo apt autoremove
+  212  nanopolish --help
+  213  sudo apt install libhdf5-1.8.14
+  214  nanopolish --help
+  215  ls
+  216  nanopolish
+  217  cd ..
+  218  conda config --add channels defaults
+  219  conda config --add channels bioconda
+  220  conda config --add channels conda-forge
+  221  conda install bwa
+  222  nanopolish --help
+  223  wget -qO- https://get.nextflow.io | bash
+  224  https://www.nextflow.io/releases/v22.04.3/nextflow?a=install
+  225  wget https://www.nextflow.io/releases/v22.04.3/nextflow?a=install
+  226  /home/nanoteam/Downloads/nextflow
+  227  bash /home/nanoteam/Downloads/nextflow
+  228  ls
+  229  cd home/nanoteam
+  230  cd /home/nanoteam
+  231  ls
+  232  mkdir .nextflow
+  233  locate .nextflow
+  234  ls
+  235  cd .nextflow
+  236  ls
+  237  cd framework
+  238  ls
+  239  chmod +x nextflow-22.04.3-one.jar
+  240  ls
+  241  cd 22.04.3
+  242  ls
+  243  cd ..
+  244  export PATH="/home/nanoteam/.nextflow/framework:$PATH"
+  245  java -version
+  246  ls
+  247  java -jar
+  248  java -jar nextflow-22.04.3-one.jar 
+  249  ls
+  250  nextflow
+  251  cd ..
+  252  ls
+  253  nanopolish
+  254  minimap2
+  255  krakan
+  256  krakan2
+  257  kraken2
+  258  nanoplot
+  259  nanoPlot
+  260  NanoPlot
+  261  conda install -c bioconda nanoplot
+  262  conda install -c bioconda krona
+  263  krona --version
+  264  ktImptTaxonomy
+  265  ktImpTaxonomy
+  266  ktImportTaxonomy
+  267  pip install NanoPlot
+  268  NanoPlot --help
+  269  ls
+  270  cd ..
+  271  ls
+  272  cd ..
+  273  ls
+  274  cd ..
+  275  ls
+  276  cd C:\Users\ngs-adm\Desktop\VMfiles
+  277  history > comhis.txt
+  278  ls
+  279  history >> comhis.txt
+  280  ls
+  281  cd home/
+  282  ls
+  283  cd nanoteam/
+  284  ls
+  285  cd Desktop/
+  286  history
+  287  history > his.txt
+  288  cd /mnt/hgfs
+  289  ls
+  290  cd VMfiles
+  291  cd /VMfiles
+  292  find
+  293  locate
+  294  locate VMfiles-2
+  295  ls
+  296  cd ..
+  297  ls
+  298  cd ..
+  299  ls
+  300  du -h --max-depth=1
+  301  ls
+  302  cd mnt
+  303  ls
+  304  cd/home/nanoteam
+  305  cd /home/nanoteam
+  306  ls
+  307  cd /.cache
+  308  cd .cache
+  309  ls
+  310  cd vmware
+  311  du -h --max.depth
+  312  du -h --max.depth=1
+  313  ls
+  314  du -h --max-depth=1
+  315  rm drag_and_drop
+  316  rmdir drag_and_drop
+  317  rmdir -h
+  318  rmdir --help
+  319  rmdir -r drag_and_drop
+  320  rm -r drag_and_drop
+  321  cd
+  322  ls
+  323  cd /home/nanoteam/.cache/vmware
+  324  ls
+  325  guppy_basecaller --help
+  326  bash /Desktop/Nano16S-scripts/bc
+  327  bash /home/nanoteam/Desktop/Nano16S-scripts
+  328  bash /home/nanoteam/Desktop/Nano16S-scripts/bc
+  329  conda
+  330  conda create
+  331  python
+  332  conda
+  333  conda create -n pipits_env --channel bioconda --channel conda-forge --channel defaults python=3.6 pipits
+  334  wget https://sourceforge.net/projects/pipits/files/PIPITS_TESTDATA/pipits_test.tar.gz -O pipits_test.tar.gz
+  335  tar xvfz pipits_test.tar.gz
+  336  LS
+  337  ls
+  338  cd pipits_test/
+  339  conda activate pipits_env
+  340  conda init --help
+  341  conda info | grep -i 'base environment'
+  342  source ~/anaconda3/etc/profile.d/conda.sh
+  343  conda activate pipits_env
+  344  pispino_createreadpairslist -i rawdata -o readpairslist.txt
+  345  ls
+  346  pispino_seqprep -i rawdata -o out_seqprep -l readpairslist.txt
+  347  pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2 -v -r
+  348  pipits_process -i out_funits/ITS.fasta -o out_process -v -r
+  349  find Fungome-kopie
+  350  cd ..
+  351  ls
+  352  cd ..
+  353  find Fungome-kopie
+  354  ls
+  355  cd ..
+  356  ls
+  357  cd ..
+  358  ls
+  359  cd ..
+  360  ls
+  361  find Fungome-kopie
+  362  find Fungome - Kopie
+  363  find
+  364  find --help
+  365  cd ..
+  366  ls
+  367  find Fungome - Kopie
+  368  ls
+  369  cd ..
+  370  ls
+  371  find Metagenomics_Linux
+  372  cd ..
+  373  ls
+  374  cd ..
+  375  ls
+  376  find Metagenomics_Linux
+  377  cd
+  378  ls
+  379  find Metagenomics_Linux
+  380  ls
+  381  cd ..
+  382  ls
+  383  cd ..
+  384  ls
+  385  cd media/
+  386  ls
+  387  cd nanoteam/
+  388  ls
+  389  cd ,,
+  390  /usr/bin/vmhgfs-fuse --enabled
+  391  vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+  392  cd  /mnt/hgfs
+  393  ls
+  394  sudo apt-get purge open-vm-tools
+  395  sudo apt update
+  396  sudo apt install open-vm-tools-desktop
+  397  sudo apt update 
+  398  sudo apt upgrade 
+  399  find Metagenomics_Linux
+  400  mkdir ~/testshare
+  401  ls
+  402  sudo mount -t fuse.vmhgfs-fuse .host:/testshare~/testshare
+  403  sudo mount -t fuse.vmhgfs-fuse .host:/Metagenomics_Linux~/testshare
+  404  sudo mount -t fuse.vmhgfs-fuse .host:/Metagenomics_Linux testshare
+  405  ls
+  406  sudo umount testshare
+  407  sudo mount -t fuse.vmhgfs-fuse -o allow_other .host:/Metagenomics_Linux testshare
+  408  ls
+  409  cd testshare/
+  410  ls
+  411  df -h
+  412  ls
+  413  df -h
+  414  conda update pipits
+  415  ls
+  416  conda activate pipits_env
+  417  conda info | grep -i 'base environment'
+  418  source ~/home/nanoteam/anaconda3/etc/profile.d/conda.sh
+  419  ls
+  420  cd ..
+  421  ls
+  422  cd nanoteam/
+  423  ls
+  424  source ~/anaconda3/etc/profile.d/conda.sh
+  425  conda activate pipits_env
+  426  pipits_funits
+  427  ls
+  428  cd Desktop/
+  429  ls
+  430  cd Fastq_OP_linux/
+  431  ls
+  432  pispino_createreadpairslist -i rawdata -o readpairslist.txt
+  433  pispino_createreadpairslist -i /home/nanoteam/Desktop/Fastq_OP_linux -o readpairslist.txt
+  434  pispino_seqprep -i /home/nanoteam/Desktop/Fastq_OP_linux -o out_seqprep -l readpairslist.txt
+  435  pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2
+  436  ls
+  437  pipits_process -i out_funits/ITS.fasta -o out_process
+  438  pipits_funguild.py -i out_process/otu_table.txt -o out_process/otu_table_funguild.txt
+  439  ls
+  440  cd Desktop/
+  441  ls
+  442  history > his_09062022.txt
+  443  cd ..
+  444  source ~/anaconda3/etc/profile.d/conda.sh
+  445  conda activate pipits_env
+  446  cd /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome/
+  447  ls
+  448  pispino_createreadpairslist -i rawdata -o readpairslist.txt
+  449  pispino_createreadpairslist -i /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome -o readpairslist.txt
+  450  pispino_seqprep -i /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome -o out_seqprep -l readpairslist.txt
+  451  pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2
+  452  pipits_process -i out_funits/ITS.fasta -o out_process
+  453  cd ..
+  454  ls
+  455  wget https://data.qiime2.org/distro/core/qiime2-2022.2-py38-linux-conda.yml
+  456  conda env create -n qiime2-2022.2 --file qiime2-2022.2-py38-linux-conda.yml
+  457  conda deactivate
+  458  ls
+  459  conda activate qiime2-2022.2
+  460  qiime --help
+  461  qiime --version 
+  462  qiime info 
+  463  qiime i
+  464  cd /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome/out_process/
+  465  ls
+  466  qiime tools import   --input-path otu_table.biom   --type 'FeatureTable[Frequency]'   --input-format BIOMV210Format   --output-path feature-table-2.qza
+  467  qiime
+  468  qiime tools import
+  469  qiime tools import \ --input-path otu_table.biom \--type 'FeatureTable[Frequency]' \ --input-format BIOMV210Format \--output-path feature-table-2.qza
+  470  qiime tools import --input-path otu_table.biom --type 'FeatureTable[Frequency]'--output-path feature-table-2.qza
+  471  qiime tools import --input-path otu_table.biom --type 'FeatureTable[Frequency]' --output-path feature-table-2.qza
+  472  qiime tools
+  473  source ~/anaconda3/etc/profile.d/conda.sh
+  474  ls
+  475  cd Desktop/
+  476  ls
+  477  cd Fastq_OP_linux/
+  478  ls
+  479  cd out_process/
+  480  ls
+  481  qiime tools
+  482  conda activate qiime2-2022.2
+  483  qiime --help
+  484  qiime tools import --input-path otu_table.biom --type 'FeatureTable[Frequency]' --output-path feature-table-2.qza
+  485  qiime tools
+  486  qiime taxa barplot   --i-table table.qza   --i-taxonomy taxonomy.qza   --m-metadata-file sample-metadata.tsv \
+  487  qiime taxa barplot \--i-table feature-table-2.qza \--i-taxonomy assigned_taxonomy.txt \--o-visualization taxa-bar-plots.qzv
+  488  qiime tools 
+  489  qiime tools import
+  490  qiime tools import --show-importable-types 
+  491  qiime tools import --show-importable-formats 
+  492  qiime tools import --input-path assigned_taxonomy.txt --type 'FeatureData[Taxonomy]' --output-path assigned_taxonomy.qza
+  493  cd ..
+  494  cd VMfiles
+  495  bash ../Nano16S-scripts/join
+  496  bash ../Nano16S-scripts/fQC
+  497  bash ../Nano16S-scripts/mQC
+  498  df -h
+  499  cd ../VMfiles
+  500  cd ..
+  501  ls
+  502  cd Desktop/VMfiles
+  503  ls
+  504  bash ../Nano16S-scripts/bc
+  505  gupy_basecaller --print_workflows
+  506  guppy_basecaller --print_workflows
+  507  bash ../Nano16S-scripts/bc
+  508  bash ../Nano16S-scripts/join
+  509  bash ../Nano16S-scripts/fQC
+  510  bash ../Nano16S-scripts/mQC
+  511  bash ../Nano16S-scripts/bc
+  512  bash ../Nano16S-scripts/join 
+  513  ls ../Nano16S-scripts/
+  514  bash ../Nano16S-scripts/mQC 
+  515  bash ../Nano16S-scripts/fQC 
+  516  bash ../Nano16S-scripts/mQC 
+  517  bash ../Nano16S-scripts/join
+  518  bash ../Nano16S-scripts/QC_filt
+  519  porechop --version
+  520  porechop
+  521  conda install -c bioconda porechop
+  522  porechop
+  523  porechop --versiom
+  524  porechop --version
+  525  bash ../Nano16S-scripts/filt
+  526  ls
+  527  tar zxvf minikraken2_v2_8GB_201904.tgz 
+  528  ls
+  529  bash ../Nano16S-scripts/align 
+  530  ls
+  531  cd NanoClin_Fastq_joined/
+  532  ls
+  533  bash ../Nano16S-scripts/align
+  534  bash /home/nanoteam/Desktop/Nano16S-scripts/align
+  535  ls
+  536  bash /home/nanoteam/Desktop/Nano16S-scripts/align
+  537  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped 
+  538  bash /home/nanoteam/Desktop/Nano16S-scripts/kronap 
+  539  updateTaxonomy.sh
+  540  bash updateTaxonomy.sh
+  541  ls
+  542  cd ..
+  543  ls
+  544  cd NanoClin_Fastq_joined/
+  545  ls
+  546  df -h
+  547  history > his_12092022.txt
