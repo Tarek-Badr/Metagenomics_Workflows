@@ -1,0 +1,1000 @@
+  407  sudo mount -t fuse.vmhgfs-fuse -o allow_other .host:/Metagenomics_Linux testshare
+  408  ls
+  409  cd testshare/
+  410  ls
+  411  df -h
+  412  ls
+  413  df -h
+  414  conda update pipits
+  415  ls
+  416  conda activate pipits_env
+  417  conda info | grep -i 'base environment'
+  418  source ~/home/nanoteam/anaconda3/etc/profile.d/conda.sh
+  419  ls
+  420  cd ..
+  421  ls
+  422  cd nanoteam/
+  423  ls
+  424  source ~/anaconda3/etc/profile.d/conda.sh
+  425  conda activate pipits_env
+  426  pipits_funits
+  427  ls
+  428  cd Desktop/
+  429  ls
+  430  cd Fastq_OP_linux/
+  431  ls
+  432  pispino_createreadpairslist -i rawdata -o readpairslist.txt
+  433  pispino_createreadpairslist -i /home/nanoteam/Desktop/Fastq_OP_linux -o readpairslist.txt
+  434  pispino_seqprep -i /home/nanoteam/Desktop/Fastq_OP_linux -o out_seqprep -l readpairslist.txt
+  435  pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2
+  436  ls
+  437  pipits_process -i out_funits/ITS.fasta -o out_process
+  438  pipits_funguild.py -i out_process/otu_table.txt -o out_process/otu_table_funguild.txt
+  439  ls
+  440  cd Desktop/
+  441  ls
+  442  history > his_09062022.txt
+  443  cd ..
+  444  source ~/anaconda3/etc/profile.d/conda.sh
+  445  conda activate pipits_env
+  446  cd /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome/
+  447  ls
+  448  pispino_createreadpairslist -i rawdata -o readpairslist.txt
+  449  pispino_createreadpairslist -i /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome -o readpairslist.txt
+  450  pispino_seqprep -i /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome -o out_seqprep -l readpairslist.txt
+  451  pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2
+  452  pipits_process -i out_funits/ITS.fasta -o out_process
+  453  cd ..
+  454  ls
+  455  wget https://data.qiime2.org/distro/core/qiime2-2022.2-py38-linux-conda.yml
+  456  conda env create -n qiime2-2022.2 --file qiime2-2022.2-py38-linux-conda.yml
+  457  conda deactivate
+  458  ls
+  459  conda activate qiime2-2022.2
+  460  qiime --help
+  461  qiime --version 
+  462  qiime info 
+  463  qiime i
+  464  cd /home/nanoteam/Desktop/INTeGRATE_fastq_linux/ITS/Illumina/Fastq_Integrate_fungome/out_process/
+  465  ls
+  466  qiime tools import   --input-path otu_table.biom   --type 'FeatureTable[Frequency]'   --input-format BIOMV210Format   --output-path feature-table-2.qza
+  467  qiime
+  468  qiime tools import
+  469  qiime tools import \ --input-path otu_table.biom \--type 'FeatureTable[Frequency]' \ --input-format BIOMV210Format \--output-path feature-table-2.qza
+  470  qiime tools import --input-path otu_table.biom --type 'FeatureTable[Frequency]'--output-path feature-table-2.qza
+  471  qiime tools import --input-path otu_table.biom --type 'FeatureTable[Frequency]' --output-path feature-table-2.qza
+  472  qiime tools
+  473  source ~/anaconda3/etc/profile.d/conda.sh
+  474  ls
+  475  cd Desktop/
+  476  ls
+  477  cd Fastq_OP_linux/
+  478  ls
+  479  cd out_process/
+  480  ls
+  481  qiime tools
+  482  conda activate qiime2-2022.2
+  483  qiime --help
+  484  qiime tools import --input-path otu_table.biom --type 'FeatureTable[Frequency]' --output-path feature-table-2.qza
+  485  qiime tools
+  486  qiime taxa barplot   --i-table table.qza   --i-taxonomy taxonomy.qza   --m-metadata-file sample-metadata.tsv \
+  487  qiime taxa barplot \--i-table feature-table-2.qza \--i-taxonomy assigned_taxonomy.txt \--o-visualization taxa-bar-plots.qzv
+  488  qiime tools 
+  489  qiime tools import
+  490  qiime tools import --show-importable-types 
+  491  qiime tools import --show-importable-formats 
+  492  qiime tools import --input-path assigned_taxonomy.txt --type 'FeatureData[Taxonomy]' --output-path assigned_taxonomy.qza
+  493  cd ..
+  494  cd VMfiles
+  495  bash ../Nano16S-scripts/join
+  496  bash ../Nano16S-scripts/fQC
+  497  bash ../Nano16S-scripts/mQC
+  498  df -h
+  499  cd ../VMfiles
+  500  cd ..
+  501  ls
+  502  cd Desktop/VMfiles
+  503  ls
+  504  bash ../Nano16S-scripts/bc
+  505  gupy_basecaller --print_workflows
+  506  guppy_basecaller --print_workflows
+  507  bash ../Nano16S-scripts/bc
+  508  bash ../Nano16S-scripts/join
+  509  bash ../Nano16S-scripts/fQC
+  510  bash ../Nano16S-scripts/mQC
+  511  bash ../Nano16S-scripts/bc
+  512  bash ../Nano16S-scripts/join 
+  513  ls ../Nano16S-scripts/
+  514  bash ../Nano16S-scripts/mQC 
+  515  bash ../Nano16S-scripts/fQC 
+  516  bash ../Nano16S-scripts/mQC 
+  517  bash ../Nano16S-scripts/join
+  518  bash ../Nano16S-scripts/QC_filt
+  519  porechop --version
+  520  porechop
+  521  conda install -c bioconda porechop
+  522  porechop
+  523  porechop --versiom
+  524  porechop --version
+  525  bash ../Nano16S-scripts/filt
+  526  ls
+  527  tar zxvf minikraken2_v2_8GB_201904.tgz 
+  528  ls
+  529  bash ../Nano16S-scripts/align 
+  530  ls
+  531  cd NanoClin_Fastq_joined/
+  532  ls
+  533  bash ../Nano16S-scripts/align
+  534  bash /home/nanoteam/Desktop/Nano16S-scripts/align
+  535  ls
+  536  bash /home/nanoteam/Desktop/Nano16S-scripts/align
+  537  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped 
+  538  bash /home/nanoteam/Desktop/Nano16S-scripts/kronap 
+  539  updateTaxonomy.sh
+  540  bash updateTaxonomy.sh
+  541  ls
+  542  cd ..
+  543  ls
+  544  cd NanoClin_Fastq_joined/
+  545  ls
+  546  df -h
+  547  history > his_12092022.txt
+  548  ls
+  549  cd Desktop/
+  550  ls
+  551  cd Nano16s_LmL_Run2_sam26-27-28_290722/
+  552  ls
+  553  bash ../Nano16S-scripts/bc
+  554  bash ../Nano16S-scripts/join 
+  555  bash ../Nano16S-scripts/fQC 
+  556  bash ../Nano16S-scripts/mQC 
+  557  krona
+  558  kraken
+  559  kraken2
+  560  conda install -c bioconda krona
+  561  krona --help
+  562  whereis krona
+  563  krona --version
+  564  rm krona
+  565  sudo apt --purge krona
+  566  sudo apt purge
+  567  sudo apt-get --purge remove krona
+  568  cd ..
+  569  ls
+  570  cd Desktop/
+  571  conda install -c bioconda krona
+  572  conda list
+  573  krona
+  574  ktImportTaxonomy
+  575  ktImportTaxonomy --help
+  576  cd VMfiles
+  577  cd ../Nano16S-scripts/kronap
+  578  bash ../Nano16S-scripts/kronap
+  579  KronaTools --help
+  580  updateTaxonomy.sh
+  581  bash updateTaxonomy.sh
+  582  KronaTools
+  583  KronaTools 2.8.1
+  584  KronaTools
+  585  KronaTools --version
+  586  bash /home/nanoteam/anaconda3/opt/krona/updateTaxonomy.sh
+  587  bash ../Nano16S-scripts/kronap
+  588  cd /home/nanoteam/Desktop/VMfiles/NanoClin_Fastq_joined
+  589  bash ../Nano16S-scripts/kronap
+  590  bash ../../Nano16S-scripts/kronap
+  591  mv kraken2/*.report.txt kraken_reports
+  592  mv kraken/*.report.txt kraken_reports
+  593  df -h
+  594  cd Desktop/
+  595  ls
+  596  cd Sept-Ex1-9_9_22_NanoPore/
+  597  ls
+  598  bash ../Nano16S-scripts/bc
+  599  ls
+  600  df -h
+  601  bash ../Nano16S-scripts/join 
+  602  ls
+  603  bash ../Nano16S-scripts/fQC 
+  604  bash ../Nano16S-scripts/mQC 
+  605  ls
+  606  bash ../Nano16S-scripts/QC_filt 
+  607  ls
+  608  bash ../Nano16S-scripts/align_porchoped 
+  609  ls
+  610  cd Sept_1_processed/
+  611  ls
+  612  cd fastq_joined/
+  613  ls
+  614  bash ../Nano16S-scripts/align_porchoped 
+  615  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped
+  616  cd ..
+  617  ls
+  618  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped
+  619  bash /home/nanoteam/Desktop/Nano16S-scripts/kronap 
+  620  bash updateTaxonomy.sh
+  621  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped
+  622  cd ..
+  623  ls
+  624  cd Nano16s_LmL_Run2_sam26-27-28_290722/
+  625  ls
+  626  cd Run_processed/
+  627  ls
+  628  bash ../Nano16S-scripts/QC_filt 
+  629  bash ../../Nano16S-scripts/QC_filt 
+  630  cd ..
+  631  ls
+  632  bash ../../Nano16S-scripts/QC_filt 
+  633  bash ../Nano16S-scripts/QC_filt 
+  634  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped
+  635  ls
+  636  cd Run_processed/
+  637  ls
+  638  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped
+  639  cd ..
+  640  ls
+  641  cd VMfiles/
+  642  ls
+  643  cd NanoClin_Fastq_joined/
+  644  ls
+  645  cd ..
+  646  bash ../Nano16S-scripts/Nanofilt
+  647  NanoFilt
+  648  Nanofilt
+  649  whereis NanoFilt
+  650  whereis kraken
+  651  whereis -b  kraken
+  652  whereis
+  653  whereis --help
+  654  whereis Porechop
+  655  whereis gunzip
+  656  conda install -c bioconda nanofilt
+  657  conda install -c "bioconda/label/cf201901" nanofilt
+  658  ls
+  659  cd Desktop/
+  660  ls
+  661  cd SeptD-Exp02-21092022
+  662  ls
+  663  bash ../Nano16S-scripts/bc
+  664  bash ../Nano16S-scripts/join 
+  665  ls
+  666  bash ../Nano16S-scripts/join 
+  667  bash ../Nano16S-scripts/fQC 
+  668  bash ../Nano16S-scripts/mQC 
+  669  bash ../Nano16S-scripts/QC_filt 
+  670  bash ../Nano16S-scripts/align_porchoped 
+  671  ls
+  672  xs SeptD-Exp02_processed/
+  673  ls
+  674  cd SeptD-Exp02_processed/
+  675  ls
+  676  bash ../Nano16S-scripts/align_porchoped 
+  677  bash ../../Nano16S-scripts/align_porchoped 
+  678  ls
+  679  bash ../../Nano16S-scripts/kronap 
+  680  history > his_23Sept22.txt
+  681  df -h
+  682  cd Desktop/
+  683  ls
+  684  cd SeptD_liq_20221005/
+  685  ls
+  686  bash ../Nano16S-scripts/bc
+  687  bash ../Nano16S-scripts/join
+  688  bash ../Nano16S-scripts/fQC 
+  689  bash ../Nano16S-scripts/mQC 
+  690  bash ../Nano16S-scripts/QC_filt 
+  691  ls
+  692  cd Run_processed/
+  693  ls
+  694  bash ../../Nano16S-scripts/align_porchoped 
+  695  bash ../../Nano16S-scripts/kronap 
+  696  KrakenTools
+  697  combyne_kreports.py
+  698  combine_kreports.py
+  699  kraken2
+  700  ktImportTaxonomy
+  701  conda install -c bioconda krakentools
+  702  KrakenTools
+  703  Krakentools
+  704  combine_kreports
+  705  combine_kreports.py
+  706  ls
+  707  cd VMfiles
+  708  ls
+  709  cd NanoClin_Fastq_joined
+  710  ls
+  711  cd kraken_reports
+  712  combine_kreports.py -r porechoped_C_16S01.report.txt porechoped_C_2_16S01.report.txt -o porechoped_Cj_16S01.report.txt
+  713  combine_kreports.py -r porechoped_C_16S01.report.txt porechoped_C_2_16S01.report.txt -o porechoped_Cj_16S01.report.txt --no-headers
+  714  cut -f4,5,6,7 porechoped_Cj_16S01.report.txt
+  715  cut -f4,5,6,7 porechoped_Cj_16S01.report.txt > porechoped_Cj_16S01.report.txt
+  716  combine_kreports.py -r porechoped_C_16S01.report.txt porechoped_C_2_16S01.report.txt -o porechoped_Cj_16S01.report.txt --no-headers
+  717  cut -f4,5,6,7 porechoped_Cj_16S01.report.txt > porechoped_Cj1_16S01.report.txt
+  718  cut -f1,2,3,8,9,10 porechoped_Cj_16S01.report.txt > porechoped_Cj1_16S01.report.txt
+  719  bash /home/nanoteam/Desktop/Nano16S-scripts/comb_krep
+  720  read -p "sample1 (e.g C_16S01): " S1
+  721  bash /home/nanoteam/Desktop/Nano16S-scripts/comb_krep
+  722  print porechoped_C_2_16S01_C_16S01.report.txt
+  723  ls
+  724  bash /home/nanoteam/Desktop/Nano16S-scripts/comb_krep
+  725  /home/nanoteam/Desktop/Nano16S-scripts/comb_krep_option2
+  726  bash /home/nanoteam/Desktop/Nano16S-scripts/comb_krep_option2
+  727  cd ../VMfiles
+  728  cd VMfiles
+  729  ls
+  730  cd..
+  731  cd ..
+  732  cd Nano16S-scripts
+  733  RUN=hi if [ -z ${RUN} ]
+  734  bash trial
+  735  bash join
+  736  basename RunT/fastq_porechoped/halle.fastq.gz .fastq.gz
+  737  cd ..
+  738  bash /home/nanoteam/Desktop/Nano16S-scripts/NanoClin_workflow
+  739  df -h
+  740  bash /home/nanoteam/Desktop/Nano16S-scripts/align_porchoped
+  741  bash /home/nanoteam/Desktop/Nano16S-scripts/NanoClin_workflow
+  742  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/NanoClin_workflow
+  743  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/Nanoclin_workflow
+  744  df -h
+  745  ls
+  746  file:///home/nanoteam/Desktop/SeptD
+  747  cd /home/nanoteam/Desktop/SeptD
+  748  ls
+  749  history > ivan.txt
+  750  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/Nanoclin_workflow
+  751  df -h
+  752  du /dev/sda1
+  753  du /dev/sda5
+  754  df /dev/sda5
+  755  du -h udev
+  756  du -h /udev
+  757  du /udev
+  758  du /tmpfs
+  759  df /dev/sda5
+  760  du /dev/sda5
+  761  du /
+  762  du -a / | sort -n -r | head -n 10
+  763  df -h
+  764  df -h /dev
+  765  df -h
+  766  du -h /dev/sda5
+  767  ls
+  768  cd ..
+  769  ls
+  770  df -h
+  771  du
+  772  du -h /nanoteam
+  773  ls
+  774  du -h home/nanoteam
+  775  cd nanoteam/
+  776  du -h home/nanoteam/
+  777  ls
+  778  cd ..
+  779  du -h /home/nanoteam/
+  780  du -h /home/nanoteam/ | sort -n -r | head -n 10
+  781  du -h /dev/ | sort -n -r | head -n 10
+  782  du -h /dev/sda5 | sort -n -r | head -n 10
+  783  du -h / | sort -n -r | head -n 10
+  784  mount
+  785  sudo mount /dev/sda5 /mnt
+  786  du -h /mnt | sort -n -r | head -n 10
+  787  sudo du -h /mnt | sort -n -r | head -n 10
+  788  sudo du -h / | sort -n -r | head -n 10
+  789  df -h
+  790  sudo du -h /dev/sda5 | sort -n -r | head -n 10
+  791  sudo du -h /dev | sort -n -r | head -n 10
+  792  sudo du -h /dev/ | sort -n -r | head -n 10
+  793  sudo du -h /dev/sda5/ | sort -n -r | head -n 10
+  794  ls
+  795  cd nanoteam/Desktop/
+  796  ls
+  797  cd Metagenomics_zahn/
+  798  ls
+  799  bash home/nanoteam/Desktop/Metagenomics-scripts/fQC
+  800  bash /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+  801  bash /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+  802  cd ..
+  803  kraken2-build --help
+  804  cd Metagenomics_zahn
+  805  kneaddata -i /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db /home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2 --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --bowtie2-options "--very-sensitive --dovetail" --remove-intermediate-output
+  806  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db /home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2 --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --bowtie2-options "--very-sensitive --dovetail" --remove-intermediate-output
+  807  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --bowtie2-options "--very-sensitive --dovetail" --remove-intermediate-output
+  808  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50"
+  809  conda install bowtie2
+  810  bowtie2 --version
+  811  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --bowtie2-options "--very-sensitive --dovetail" --remove-intermediate-output
+  812  kneaddata -h
+  813  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --bowtie2-options "--very-sensitive --dovetail" --remove-intermediate-output
+  814  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --trf /home/nanoteam/Desktop/Metagenomics_zahn/kneaddata_out--bowtie2-options "--very-sensitive --dovetail" --remove-intermediate-output
+  815  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --trf /home/nanoteam/Desktop/Metagenomics_zahn/kneaddata_out--bowtie2-options --very-sensitive --dovetail --remove-intermediate-output
+  816  -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --trf /home/nanoteam/Desktop/Metagenomics_zahn/kneaddata_out--bowtie2-options --very-sensitive --remove-intermediate-output
+  817  b "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --trf /home/nanoteam/Desktop/Metagenomics_zahn/kneaddata_out\
+  818  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --trf /home/nanoteam/Desktop/Metagenomics_zahn/kneaddata_out--bowtie2-options --very-sensitive --remove-intermediate-output
+  819  kneaddata -i1 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz -i2 /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz -o kneaddata_out -db "/home/nanoteam/Desktop/Metagenomics-scripts/kneadata db/hg37dec_v0.1.4.bt2" --trimmomatic /home/nanoteam/programs/Trimmomatic-0.39/ -t 4 --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50" --trf /home/nanoteam/Desktop/Metagenomics_zahn/kneaddata_out
+  820  pip install kneaddata
+  821  kneaddata_database --download human_genome bowtie2 /home/nanoteam/Desktop/Metagenomics-scripts
+  822  kneaddata
+  823  Trimmomatic
+  824  Trimmomatic-0.36
+  825  whereis Trimmomatic
+  826  whereis Trimmomatic-0.36
+  827  alias
+  828  which Trimmomatic-0.36
+  829  whereis knwaddata
+  830  whereis kneaddata
+  831  kneaddata --version
+  832  kneaddata --unpaired examples/demo.fastq --reference-db examples/demo_db --output kneaddata_demo_output
+  833  /usr/local/prg/Trimmomatic-0.36/
+  834  cd ..
+  835  ls
+  836  which trimmomatic
+  837  ant --help
+  838  /home/nanoteam/programs/Trimmomatic-0.39/trimmomatic-0.39.jar
+  839  java
+  840  java /home/nanoteam/programs/Trimmomatic-0.39/trimmomatic-0.39.jar
+  841  java -jar /home/nanoteam/programs/Trimmomatic-0.39/trimmomatic-0.39.jar
+  842  bowtie2
+  843  history > hist.txt
+  844  ls
+  845  whereis kneaddata
+  846  kneaddata --version
+  847  cd Desktop/
+  848  ls
+  849  cd Metagenomics_zahn/
+  850  ls
+  851  java -jar /home/nanoteam/programs/Trimmomatic-0.39/trimmomatic-0.39.jar 
+  852  java -jar /home/nanoteam/programs/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 -trimlog PK_1_trimlog.txt /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_1.fastq.gz /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/NG-28767_PK_1_lib539675_7705_2_2.fastq.gz PK1_2_R1_P.fastq.gz PK1_2_R1_UP.fastq.gz PK1_2_R2_P.fastq.gz PK1_2_R2_UP.fastq.gz ILLUMINACLIP:/home/nanoteam/programs/Trimmomatic-0.39/adapters/NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+  853  bowtie2 --version
+  854  bowtiw-inspect
+  855  bowtie-inspect
+  856  bowtie2-inspect
+  857  bowtie2-build
+  858  cd ../Metagenomics-scripts
+  859  bowtie2-build /home/nanoteam/Desktop/Metagenomics-scripts/hg19.fa hg19
+  860  ls
+  861  bowtie2 -x /home/nanoteam/Desktop/Metagenomics-scripts/hg19  -1 /home/nanoteam/Desktop/Metagenomics_zahn/Trimmed/PK1_2_R1_P.fastq.gz -2 /home/nanoteam/Desktop/Metagenomics_zahn/Trimmed/PK1_2_R2_P.fastq.gz  --un-conc-gz  PK1_2_host_removed  > PK1_2_mapped_and_unmapped.sam
+  862  ls
+  863  mv PK1_2_host_removed.1 PK1_2_removed_R1.fastq.gz
+  864  mv PK1_2_host_removed.2 PK1_2_removed_R2.fastq.gz
+  865  ls
+  866  braken
+  867  conda install -c bioconda bracken
+  868  braken
+  869  braken --version
+  870  bracken --version
+  871  whereis bracken
+  872  kraken2
+  873  bracken
+  874  $PATH
+  875  kraken2
+  876  whereis kraken2
+  877  bash install_bracken.sh
+  878  /home/nanoteam/programs/Bracken-master/bracken --version
+  879  cd VMfiles
+  880  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -l D  -i /home/nanoteam/Desktop/VMfiles/NanoClin_Fastq_joined/kraken_reports/porechoped_A_16S01.report.txt -o porechoped_A_16S01.braken
+  881  /home/nanoteam/programs/Bracken-master/bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -l D  -i /home/nanoteam/Desktop/VMfiles/NanoClin_Fastq_joined/kraken_reports/porechoped_A_16S01.report.txt -o porechoped_A_16S01.braken
+  882  /home/nanoteam/programs/Bracken-master/bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -l G  -i /home/nanoteam/Desktop/VMfiles/NanoClin_Fastq_joined/kraken_reports/porechoped_C2_16S11.report.txt -o porechoped_A_16S01.braken
+  883  /home/nanoteam/programs/Bracken-master/bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -l G  -i /home/nanoteam/Desktop/VMfiles/NanoClin_Fastq_joined/kraken_reports/porechoped_C_2_16S11.report.txt -o porechoped_A_16S01.braken
+  884  /home/nanoteam/programs/Bracken-master/bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -l G  -i /home/nanoteam/Desktop/VMfiles/NanoClin_Fastq_joined/kraken_reports/porechoped_C_2_16S12.report.txt -o porechoped_A_16S01.braken
+  885  cd ../Metagenomics_zahn
+  886  kraken2  --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2' \
+  887  --paired /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq.gz /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2.kraken
+  888  kraken2  --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 --paired /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq.gz /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2.kraken
+  889  kraken2  --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 --gzip-compressed-P /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq.gz /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2.kraken
+  890  kraken2 -h
+  891  kraken2  --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 --gzip-compressed --paired /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq.gz /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2.kraken
+  892  kraken2  --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 --gzip-compressed --paired /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq.gz /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq.gz \
+  893  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 --gzip-compressed --paired /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq.gz /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2.kraken
+  894  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 --paired dekont/PK1_2_removed_R1.fastq.gz dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2.kraken
+  895  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 dekont/PK1_2_removed_R1.fastq.gz dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2.kraken
+  896  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2.kreport2 dekont/PK1_2_removed_R1.fastq.gz dekont/PK1_2_removed_R2.fastq.gz --paired --output kraken/PK1_2.kraken
+  897  kraken2 --help
+  898  ls
+  899  cd dekont/
+  900  cd ..
+  901  cd dekont/
+  902  ls
+  903  cd ..
+  904  ls
+  905  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2_kraken2.tax --paired 
+  906  /dekont/PK1_2_removed_R1.fastq.gz /dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2_kraken2.txt
+  907  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2_kraken2.tax --paired /dekont/PK1_2_removed_R1.fastq.gz /dekont/PK1_2_removed_R2.fastq.gz --output kraken/PK1_2_kraken2.txt
+  908  df -h
+  909  cd dekont/
+  910  ls
+  911  gunzip PK1_2_removed_R1.fastq.gz 
+  912  gunzip PK1_2_removed_R2.fastq.gz 
+  913  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2_kraken2.tax --paired /dekont/PK1_2_removed_R1.fastq /dekont/PK1_2_removed_R2.fastq--output kraken/PK1_2_kraken2.txt
+  914  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2_kraken2.tax --paired /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq --output kraken/PK1_2_kraken2.txt
+  915  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2_kraken2.tax /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq --output kraken/PK1_2_kraken2.txt
+  916  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2_kraken2.tax /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq --output kraken/PK1_2_kraken2.txt
+  917  cd ..
+  918  ls
+  919  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --use-names --report kraken/PK1_2_kraken2.tax --paired /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R1.fastq /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_2_removed_R2.fastq --output kraken/PK1_2_kraken2.txt
+  920  for file1 in $(ls /home/nanoteam/Desktop/Metagenomics_zahn/Fastq/*1.fastq.gz); do     file2=${file1%%1.fastq.gz}"2.fastq.gz";     sample=${file1%%1.fastq.gz};     echo $file1; echo $file2; echo $sample; echo ${sample}1_UP.fastq.gz  ; done
+  921  cd Desktop/
+  922  ls
+  923  cd HP_WGS_TEST/
+  924  ls
+  925  bash /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+  926  cd ..
+  927  ls
+  928  bash /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+  929  bash /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+  930  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/align_porchoped
+  931  cd /home/nanoteam/Desktop/VMfiles/Trial/fastq_porechoped
+  932  kraken2 --db minikraken2_v2_8GB_201904_UPDATE porechoped_A_16S01.fastq.gz --gzip-compressed --output "porechoped_A_16S01.kraken" --report "porechoped_A_16S01.report.txt" --use-names
+  933  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE porechoped_A_16S01.fastq.gz --gzip-compressed --output "porechoped_A_16S01.kraken" --report "porechoped_A_16S01.report.txt" --use-names
+  934  kraken2  --version
+  935  whereis kraken2
+  936  whereis bracken
+  937  conda install kraken2
+  938  kraken2 --version
+  939  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE porechoped_A_16S01.fastq.gz --gzip-compressed --output "porechoped_A_16S01.kraken" --report "porechoped_A_16S01.report.txt" --use-names
+  940  dpkg --list
+  941  udo apt purge bracken
+  942  sudo apt purge bracken
+  943  sudo apt purge kraken2
+  944  bash /home/nanoteam/programs/kraken2-master/scripts/kraken2
+  945  kraken2
+  946  conda activate anaconda3
+  947  conda unsinstall kraken2 --force
+  948  conda uninstall kraken2 --force
+  949  kraken2
+  950  conda uninstall bracken --force
+  951  bash /home/nanoteam/programs/Bracken-master/bracken
+  952  /home/nanoteam/programs/Bracken-master/bracken
+  953  /home/nanoteam/programs/kraken2-master/scripts/kraken2
+  954  /home/nanoteam/programs/kraken2-master/scripts/kraken2 --version
+  955  conda install kraken2
+  956  kraken2
+  957  conda update kraken2
+  958  /home/nanoteam/programs/Bracken-master/bracken 
+  959  kraken2
+  960  kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE porechoped_A_16S01.fastq.gz --gzip-compressed --output "porechoped_A_16S01.kraken" --report "porechoped_A_16S01.report.txt" --use-names
+  961  kraken2-build
+  962  conda uninstall kraken2
+  963  /home/nanoteam/programs/kraken2-master/install_kraken2.sh /home/nanoteam/programs/kraken2
+  964  bash /home/nanoteam/programs/kraken2-master/install_kraken2.sh /home/nanoteam/programs/kraken2
+  965  /home/nanoteam/programs/kraken2-master/install_kraken2.sh /home/nanoteam/programs/kraken2-master
+  966  cd /home/nanoteam/programs/kraken2-master/
+  967  ls
+  968  bash install_kraken2.sh 
+  969  /home/nanoteam/programs/kraken2-master/install_kraken2.sh ../kraken2
+  970  cp /home/nanoteam/programs/kraken2/kraken2{,-build,-inspect} /home/bin
+  971  cp /home/nanoteam/programs/kraken2/kraken2{,-build,-inspect} /bin
+  972  cd ../..
+  973  cd Desktop/VMfiles/Trial
+  974  ls
+  975  /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE porechoped_A_16S01.fastq.gz --gzip-compressed --output "porechoped_A_16S01.kraken" --report "porechoped_A_16S01.report.txt" --use-names
+  976  cd fastq_porechoped
+  977  /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE A_16S02.fastq.gz --gzip-compressed --output "porechoped_A_16S01.kraken" --report "porechoped_A_16S01.report.txt" --use-names
+  978  cd ..
+  979  ls
+  980  cd Metagenomics_zahn/
+  981  ls
+  982  /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --paired /dekont/PK1_2_removed_R1.fastq /dekont/PK1_2_removed_R2.fastq --output "kraken/PK1_2.kraken" --report "kraken/PK1_2.kreport2.txt" --use-names
+  983  /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE /dekont/PK1_2_removed_R1.fastq --output "kraken/PK1_2.kraken" --report "kraken/PK1_2.kreport2.txt" --use-nam
+  984  /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --paired dekont/PK1_2_removed_R1.fastq dekont/PK1_2_removed_R2.fastq --output "kraken/PK1_2.kraken" --report "kraken/PK1_2.kreport2.txt" --use-names
+  985  cd ..
+  986  ls
+  987  Metagenomics-scripts/
+  988  ls
+  989  cd Metagenomics-scripts/
+  990  ls
+  991  cd ..
+  992  bash Metagenomics-scripts/kronap 
+  993  cd Metagenomics_zahn/
+  994  ls
+  995  /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE --paired dekont/PK1_2_removed_R1.fastq dekont/PK1_2_removed_R2.fastq --output "kraken/PK1_2.krona.kraken" 
+  996  cd ..
+  997  bash Metagenomics-scripts/kronap 
+  998  bash Metagenimics-scripts/trimm
+  999  bash Metagenimics-scripts/trim
+ 1000  ls Metagenimics-scripts
+ 1001  bash Metagenomics-scripts/trim
+ 1002  bash Metagenomics-scripts/filthuman_bowtie 
+ 1003  cd 
+ 1004  cd /media/nanoteam/BGI_WSX/Metagenome_zahn/
+ 1005  ls
+ 1006  cd ..
+ 1007  bash /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+ 1008  cd /media/nanoteam/BGI_WSX/Metagenome_zahn/
+ 1009  ls
+ 1010  cd ..
+ 1011  ls
+ 1012  bash /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+ 1013  df -h
+ 1014  ls
+ 1015  cd Desktop/
+ 1016  ls
+ 1017  cd SeptD_4_07122022/
+ 1018  ls
+ 1019  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/Nanoclin_workflow
+ 1020  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/align_porchoped 
+ 1021  kraken2
+ 1022  /home/nanoteam/programs/kraken2/kraken2
+ 1023  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/align_porchoped 
+ 1024  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/kronap 
+ 1025  df -h
+ 1026  history > his_09122022
+ 1027  df -h
+ 1028  cd Desktop/
+ 1029  ls
+ 1030  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/Nanoclin_workflow
+ 1031  cd SeptD_4_071222
+ 1032  ls
+ 1033  bash /home/nanoteam/Desktop/Nano16S-scripts/Nanopore_16S_Workflow/Nanoclin_workflow
+ 1034  combine_bracken_outputs.py
+ 1035  python
+ 1036  python3
+ 1037  braken
+ 1038  sh /home/nanoteam/Desktop/Metagenomics-scripts/Bracken-2.7/install_bracken.sh
+ 1039  cd /home/nanoteam/Desktop/Metagenomics-scripts/Bracken-2.7
+ 1040  sh install_bracken.sh
+ 1041  echo "$PATH"
+ 1042  bracken
+ 1043  bracken-build
+ 1044  kraken2
+ 1045  bracken-build
+ 1046  bracken-build -h
+ 1047  bracken -h
+ 1048  bracken
+ 1049  /home/nanoteam/programs/Bracken-2.7/bracken
+ 1050  cd ..
+ 1051  bracken
+ 1052  bracken-build -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -l 150
+ 1053  ls
+ 1054  cd Bracken-2.7
+ 1055  bracken-build -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -l 150
+ 1056  cd ../../Desktop/Metagenomics_zahn
+ 1057  ls
+ 1058  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 56 -l S  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken/PK1_2.braken
+ 1059  for file in $(ls ${FOLDER}/kraken/*.kreport2.txt); bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i $file -o bracken/PK1_2.D.braken
+ 1060  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l P  -i $file -o bracken/PK1_2.P.braken
+ 1061  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l C  -i $file -o bracken/PK1_2.C.braken
+ 1062  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l O  -i $file -o bracken/PK1_2.O.braken
+ 1063  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l F  -i $file -o bracken/PK1_2.F.braken
+ 1064  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l G  -i $file -o bracken/PK1_2.G.braken
+ 1065  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i $file -o bracken/PK1_2.S.braken
+ 1066  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken/PK1_2.S.braken
+ 1067  for file in $(ls ${FOLDER}/kraken/*.kreport2.txt); do bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i $file -o bracken/PK1_2.D.braken; bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l P  -i $file -o bracken/PK1_2.P.braken; bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l C  -i $file -o bracken/PK1_2.C.braken; bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l O  -i $file -o bracken/PK1_2.O.braken; bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l F  -i $file -o bracken/PK1_2.F.braken; bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l G  -i $file -o bracken/PK1_2.G.braken; bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i $file -o bracken/PK1_2.S.braken; done
+ 1068  or file in $(ls ${kraken/*.kreport2.txt)
+ 1069  do
+ 1070  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i $file -o bracken/PK1_2.D.braken
+ 1071  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l P  -i $file -o bracken/PK1_2.P.braken
+ 1072  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l C  -i $file -o bracken/PK1_2.C.braken
+ 1073  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l O  -i $file -o bracken/PK1_2.O.braken
+ 1074  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l F  -i $file -o bracken/PK1_2.F.braken
+ 1075  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l G  -i $file -o bracken/PK1_2.G.braken
+ 1076  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i $file -o bracken/PK1_2.S.braken
+ 1077  for file in $(ls ${kraken/*.kreport2.txt)
+ 1078  do
+ 1079  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i $file -o bracken/PK1_2.D.braken
+ 1080  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l P  -i $file -o bracken/PK1_2.P.braken
+ 1081  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l C  -i $file -o bracken/PK1_2.C.braken
+ 1082  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l O  -i $file -o bracken/PK1_2.O.braken
+ 1083  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l F  -i $file -o bracken/PK1_2.F.braken
+ 1084  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l G  -i $file -o bracken/PK1_2.G.braken
+ 1085  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i $file -o bracken/PK1_2.S.braken
+ 1086  done
+ 1087  for file in $(ls kraken/*.kreport2.txt);     do         bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i $file -o bracken/PK1_2.D.bracken;         bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l P  -i $file -o bracken/PK1_2.P.bracken;         bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l C  -i $file -o bracken/PK1_2.C.bracken;         bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l O  -i $file -o bracken/PK1_2.O.bracken;         bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l F  -i $file -o bracken/PK1_2.F.bracken;         bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l G  -i $file -o bracken/PK1_2.G.bracken;         bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i $file -o bracken/PK1_2.S.bracken;     done
+ 1088  python3 combine-bracken-outputs.py
+ 1089  python3 anaconda3/bin/combine-bracken-outputs.py
+ 1090  python3 /home/nanoteam/programs/Bracken-2.7/analysis_scripts/combine_bracken_outputs.py
+ 1091  ls
+ 1092  cd Desktop/Metagenomics_zahn
+ 1093  ls
+ 1094  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken1/PK1_2_t.S.braken
+ 1095  python3 /home/nanoteam/programs/Bracken-2.7/analysis_scripts/combine_bracken_outputs.py --files bracken1/*.S.bracken -o bracken_merged/merged_output.S.bracken
+ 1096  ls bracken1
+ 1097  python3 /home/nanoteam/programs/Bracken-2.7/analysis_scripts/combine_bracken_outputs.py --files bracken1/*.S.braken -o bracken_merged/merged_output.S.bracken
+ 1098  bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l P  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken1/PK1_2_t.P.braken
+ 1099  time -h
+ 1100  time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l G  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken1/PK1_2_t.G.braken
+ 1101  time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken1/PK1_2_t.D.braken
+ 1102  for file in $(ls ${kraken/*.kreport2.txt)
+ 1103      do
+ 1104          echo $file
+ 1105      done
+ 1106  for file in $(ls kraken/*.kreport2.txt);     do         echo $file;     done
+ 1107  bracken
+ 1108  bracken -h
+ 1109  time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken1/PK1_2_t.D.braken -w bracken
+ 1110  time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i /home/nanoteam/Desktop/Metagenomics_zahn/kraken/PK1_2.kreport2.txt -o bracken1/PK1_2_t.D.braken -w bracken1/PK1_2_t.domains.txt
+ 1111  bash /home/nanoteam/Desktop/Metagenomics-scripts/bracken
+ 1112  $ pip install kraken-biom
+ 1113  pip install kraken-biom
+ 1114  bracken -h
+ 1115  kraken2
+ 1116  kraken-biom
+ 1117  kraken-biom -h
+ 1118  kraken-biom --help
+ 1119  kraken-biom -h
+ 1120  pip install --upgrade numpy
+ 1121  kraken-biom -h
+ 1122  kraken-biom $(ls kraken/*.kreport2.txt)
+ 1123  kraken-biom $(ls kraken/*.kreport2.txt) --fmt tsv --gzip -o table.tsv
+ 1124  kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.kreport2.txt.S.txt
+ 1125  kraken-biom kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.kreport2.txt.S.txt --fmt tsv --gzip -o table.tsv
+ 1126  kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.kreport2.txt.S.txt --fmt tsv --gzip -o table.tsv
+ 1127  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt});         echo $sample;     done
+ 1128  f [ -z ${FOLDER} ];
+ 1129  then
+ 1130  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt}); echo $file;         echo $sample;     done
+ 1131  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt}); echo $file;         echo $sample;     done
+ 1132  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt});        echo $file ;  echo $sample;     done
+ 1133  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt});         echo $sample;     done
+ 1134  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt});         echo $file;         echo $sample;     done
+ 1135  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt});         echo $sample;     done
+ 1136  if [ -z ${FOLDER} ]; then     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER; else     echo "Quality control run $FOLDER1"; fi ; for file in $(ls ${FOLDER}/kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt});         echo $sample;     done
+ 1137  for file in $(ls kraken/*.kreport2.txt);     do         sample=$(basename ${file%%.kreport.txt});         echo $sample;     done
+ 1138  /home/nanoteam/Desktop/Metagenomics-scripts/bracken
+ 1139  bash /home/nanoteam/Desktop/Metagenomics-scripts/bracken
+ 1140  kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.kreport2.txt.S.txt -o PK.biom
+ 1141  cd Desktop/Metagenomics_zahn
+ 1142  kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.txt.S.txt -o PK.biom
+ 1143  kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.S.txt -o PK.biom
+ 1144  kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.S.txt --fmt tsv --gzip -o table.tsv
+ 1145  kraken-biom /home/nanoteam/Desktop/Metagenomics_zahn/bracken/PK1_2.S.txt --fmt tsv --gzip -o PK.tsv
+ 1146  ls
+ 1147  biom
+ 1148  biom --version
+ 1149  ls
+ 1150  cd Desktop/Metagenomics_zahn/
+ 1151  ls
+ 1152  biom head PK.biom 
+ 1153  biom --help
+ 1154  biom head --help
+ 1155  biom head -i PK.biom 
+ 1156  ls
+ 1157  merge
+ 1158  bash /home/nanoteam/Desktop/Metagenomics-scripts/k_biom
+ 1159  biom head -i PK.biom 
+ 1160  bash /home/nanoteam/Desktop/Metagenomics-scripts/k_biom
+ 1161  biom head -i table.biom 
+ 1162  bash /home/nanoteam/Desktop/Metagenomics-scripts/k_biom
+ 1163  biom head -i table.biom 
+ 1164  bash /home/nanoteam/Desktop/Metagenomics-scripts/k_biom
+ 1165  biom head -i table.biom 
+ 1166  biom head -i S-table.biom 
+ 1167  qiime
+ 1168  qiime2
+ 1169  qiime 2
+ 1170  pipits
+ 1171  conda activate pipits_env
+ 1172  pipits
+ 1173  conda init pipits_env
+ 1174  source ~/anaconda3/etc/profile.d/conda.sh 
+ 1175  conda init pipits_env
+ 1176  conda activate pipits_env
+ 1177  ls
+ 1178  pipits
+ 1179  pipits_its
+ 1180  pipits_funits
+ 1181  qiime2
+ 1182  conda deactivate pipits_env
+ 1183  conda deactivate
+ 1184  ls
+ 1185  kraken-build -h
+ 1186  kraken2-build -h
+ 1187  cd Desktop
+ 1188  kraken2-build --standard --db kraken2-standard-db/
+ 1189  kraken2-build --standard --db kraken2-standard-db
+ 1190  kraken2-build --standard --db kraken2-standard-db/
+ 1191  conda activate qiime2-2022.2
+ 1192  conda init
+ 1193  conda init /home/nanoteam/anaconda3/envs/
+ 1194  conda init /home/nanoteam/anaconda3/envs
+ 1195  conda init bash
+ 1196  source /home/nanoteam/anaconda3/envs
+ 1197  source /home/nanoteam/anaconda3/envs/
+ 1198  conda init --help
+ 1199  conda init powershell
+ 1200  conda activate qiime2-2022.2
+ 1201  source /home/nanoteam/anaconda3/etc/profile.d/conda.sh
+ 1202  conda activate qiime2-2022.2
+ 1203  quiime
+ 1204  qiime2
+ 1205  qiime
+ 1206  bash /home/nanoteam/Desktop/Metagenomics-scripts/k_biom
+ 1207  bash /home/nanoteam/Desktop/Metagenomics-scripts/k_biom 
+ 1208  clear
+ 1209  quiime tools import
+ 1210  qiime tools import
+ 1211  qiime tools import --show importable types
+ 1212  qiime tools import --show-importable-types
+ 1213  cd Desktop/Metagenomics_zahn/dekont/
+ 1214  bash /home/nanoteam/Desktop/Metagenomics-scripts/q_manifest
+ 1215  cd ..
+ 1216  bash /home/nanoteam/Desktop/Metagenomics-scripts/q_manifest
+ 1217  $PWD kraken
+ 1218  bash /home/nanoteam/Desktop/Metagenomics-scripts/q_manifest
+ 1219  $PWD
+ 1220  bash /home/nanoteam/Desktop/Metagenomics-scripts/q_manifest
+ 1221  bash /home/nanoteam/Desktop/Metagenomics-scripts/qiime
+ 1222  qiime tools view qiime/demux.qzv
+ 1223  qiime tools view /home/nanoteam/Desktop/Metagenomics_zahn/qiime/demux.qza
+ 1224  bash /home/nanoteam/Desktop/Metagenomics-scripts/qiime
+ 1225  cd /media/nanoteam/BGI_WSX/Metagenome_zahn
+ 1226  ls
+ 1227  cd Fastq/
+ 1228  ls
+ 1229  ls *_1.fastq.gz
+ 1230  ls *_1.fastq.gz > sampleID.txt
+ 1231  /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+ 1232  bash /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+ 1233  bash /home/nanoteam/Desktop/Metagenomics-scripts/trim
+ 1234  bash /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+ 1235  df -h
+ 1236  conda activate qiime2-2022.2
+ 1237  qiime dada2
+ 1238  qiime dada2 denoise-paired
+ 1239  bash /home/nanoteam/Desktop/Metagenomics_zahn/qiime
+ 1240  bash /home/nanoteam/Desktop/Metagenomics-scripts/qiime 
+ 1241  qiime tools import
+ 1242  bash /home/nanoteam/Desktop/Metagenomics-scripts/dada2
+ 1243  clear
+ 1244  bash /home/nanoteam/Desktop/Metagenomics-scripts/TB_workflow
+ 1245  clear
+ 1246  bash /home/nanoteam/Desktop/Metagenomics-scripts/TB_workflow
+ 1247  ls
+ 1248  cd Desktop/
+ 1249  ls
+ 1250  bash /home/nanoteam/Desktop/Metagenomics-scripts/TB_workflow
+ 1251  conda deactivate
+ 1252  bowtie2
+ 1253  /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+ 1254  bash /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+ 1255  bash /home/nanoteam/Desktop/Metagenomics-scripts/trim
+ 1256  bash /home/nanoteam/Desktop/Metagenomics-scripts/TB_workflow
+ 1257  /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+ 1258  bash /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+ 1259  bash /home/nanoteam/Desktop/Metagenomics-scripts/TB_workflow
+ 1260  bash /home/nanoteam/Desktop/Metagenomics-scripts/kraken
+ 1261  bash /home/nanoteam/Desktop/Metagenomics-scripts/align_kraken
+ 1262  ls /home/nanoteam/Desktop/Metagenomics_zahn/dekont
+ 1263  ls /home/nanoteam/Desktop/Metagenomics_zahn/dekont/*R1.fastq.gz
+ 1264  bash /home/nanoteam/Desktop/Metagenomics-scripts/align_kraken
+ 1265  bash /home/nanoteam/Desktop/Metagenomics-scripts/TB_workflow
+ 1266  bash /home/nanoteam/Desktop/Metagenomics-scripts/bracken
+ 1267  bash /home/nanoteam/Desktop/Metagenomics-scripts/TB_workflow
+ 1268  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1269  bash /home/nanoteam/Desktop/Metagenomics-scripts/fQC_dekont 
+ 1270  bash /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+ 1271  $ git clone https://github.com/biobakery/MetaPhlAn2.git
+ 1272  git clone https://github.com/biobakery/MetaPhlAn2.git
+ 1273  export PATH=`/home/nanoteam/programs/MetaPhlAn2`:$PATH
+ 1274  export mpa_dir=`/home/nanoteam/programs/MetaPhlAn2`
+ 1275  metaphlan2.py
+ 1276  $PATH
+ 1277  "pwd"
+ 1278  export PATH=/home/nanoteam/programs/MetaPhlAn2:$PATH
+ 1279  $PATH
+ 1280  export mpa_dir=/home/nanoteam/programs/MetaPhlAn2
+ 1281  metaphlan2.py
+ 1282  metaphlan2.py -v
+ 1283  conda create --name HUMAnN2
+ 1284  conda activate HUMAnN2
+ 1285  conda deactivate
+ 1286  pip install humann2
+ 1287  humann2 -h
+ 1288  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1289  bash /home/nanoteam/Desktop/Metagenomics-scripts/fQC_dekont
+ 1290  df -h
+ 1291  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1292  humann2_databases
+ 1293  df -h
+ 1294  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1295  cat /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz
+ 1296  head /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz
+ 1297  head /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz >/Metagenomics_zahn/x.fastq
+ 1298  head /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz > Metagenomics_zahn/x.fastq
+ 1299  cat Metagenomics_zahn/x.fastq
+ 1300  nano Metagenomics_zahn/x.fastq 
+ 1301  head /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz > Metagenomics_zahn/x.fastq.gz
+ 1302  nano /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz
+ 1303  head /home/nanoteam/Desktop/Metagenomics_zahn/dekont/PK1_removed_R1.fastq.gz
+ 1304  git clone https://github.com/openpaul/fqless
+ 1305  cd fqless
+ 1306  ./configure
+ 1307  make
+ 1308  make install
+ 1309  fqless
+ 1310  zless
+ 1311  zless -h
+ 1312  zless --help
+ 1313  zless /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz
+ 1314  df -h
+ 1315  bowtie2 --version
+ 1316  metaphlan2.py --version
+ 1317  diamond --version
+ 1318  metaphlan2.py --version
+ 1319  humann2 --version
+ 1320  whereis biom
+ 1321  conda update biom
+ 1322  biom-format
+ 1323  biom
+ 1324  conda install -c bioconda biom-format
+ 1325  biom-format
+ 1326  whereis biom-format
+ 1327  biom
+ 1328  biom-format
+ 1329  conda create --name biomenv
+ 1330  conda activate biomenv
+ 1331  conda install --help
+ 1332  conda install -n biomenv numpy=1.23.0
+ 1333  biom
+ 1334  numpy
+ 1335  python -c "import numpy; print(numpy.version.version)"
+ 1336  biom
+ 1337  python -c "import numpy; print(numpy.version.version)"
+ 1338  conda install -n biomenv  bion-format
+ 1339  conda install -n biomenv  biom-format
+ 1340  biom
+ 1341  metaphlan2.py
+ 1342  metaphlan2.py --help
+ 1343  df- h
+ 1344  df -h
+ 1345  numpy
+ 1346  numpy --version
+ 1347  biom
+ 1348  NumPy
+ 1349  import numpy
+ 1350  numpy.version.version
+ 1351  import numpy
+ 1352  python -c "import numpy; print(numpy.version.version)"
+ 1353  biom --help
+ 1354  conda activate biomenv
+ 1355  conda list -n biomenv
+ 1356  metaphlan.py --version
+ 1357  metaphlan2.py --version
+ 1358  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1359  metaphlan2.py --help
+ 1360  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1361  humann2_test
+ 1362  humann2_databases –download utility_mapping full /home/nanoteam/Desktop/Metagenomics-scripts/humann2_db
+ 1363  humann2_databases --download utility_mapping full /home/nanoteam/Desktop/Metagenomics-scripts/humann2_db
+ 1364  humann2 –input /home/nanoteam/Downloads/humann2-2.8.2/examples/demo.fastq –output /home/nanoteam/Downloads/humann2-2.8.2/
+ 1365  humann2 --input /home/nanoteam/Downloads/humann2-2.8.2/examples/demo.fastq --output /home/nanoteam/Downloads/humann2-2.8.2/
+ 1366  humann2 --input /home/nanoteam/Downloads/humann2-2.8.2/examples/demo.fastq --output /home/nanoteam/Downloads/humann2-2.8.2/ --metaphlan /home/nanoteam/programs/MetaPhlAn2
+ 1367  methaplan2.py --help
+ 1368  metaphlan2.py --help
+ 1369  metaphlan2.py --install
+ 1370  humann2 --input /home/nanoteam/Downloads/humann2-2.8.2/examples/demo.fastq --output /home/nanoteam/Downloads/humann2-2.8.2/ --metaphlan /home/nanoteam/programs/MetaPhlAn2
+ 1371  metaphlan2.py --install --bowtie2db /home/nanoteam/programs/MetaPhlAn2/mpa_v20_m20
+ 1372  metaphlan2.py --version
+ 1373  export PATH=/home/nanoteam/programs/MetaPhlAn-2.7.8:$PATH
+ 1374  /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1375  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1376  methaplan2.py
+ 1377  bash /home/nanoteam/Desktop/Metagenomics-scripts/metaphlan2
+ 1378  methaplan2.py
+ 1379  export PATH=/home/nanoteam/programs/MetaPhlAn2:$PATH
+ 1380  $PATH
+ 1381  methaplan2.py
+ 1382  methaplan2.py --help
+ 1383  export mpa_dir=/home/nanoteam/programs/MetaPhlAn2
+ 1384  methaplan2.py --help
+ 1385  metahlan2.py
+ 1386  metaphlan2.py
+ 1387  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1388  metaphlan2.py --version
+ 1389  biom
+ 1390  biom --version
+ 1391  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1392  metaphlan2.py
+ 1393  metaphlan2.py --version
+ 1394  bash /home/nanoteam/Desktop/Metagenomics-scripts/cat
+ 1395  metaphlan2.py --version
+ 1396  conda activate biomenv
+ 1397  metaphlan2.py
+ 1398  export PATH=/home/nanoteam/programs/MetaPhlAn-2.7.8:$PATH
+ 1399  metaphlan2.py
+ 1400  metaphlan2.py --install /home/nanoteam/programs/MetaPhlAn-2.7.8
+ 1401  conda install - biom -c bioconda metaphlan2=2.8
+ 1402  conda install -n biom -c bioconda metaphlan2=2.8
+ 1403  conda install -n biomenv -c bioconda metaphlan2=2.8
+ 1404  python
+ 1405  history
+ 1406  history > his.16122022.txt

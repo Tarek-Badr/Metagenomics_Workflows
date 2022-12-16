@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Quality control run $FOLDER1"
+fi
+
+mkdir -p ${FOLDER}/multiQC
+
+multiqc ${FOLDER}/fastQC/rawdata/*_fastqc.zip -o ${FOLDER}/multiQC --filename rawdata

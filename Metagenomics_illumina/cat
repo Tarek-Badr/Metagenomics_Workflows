@@ -1,0 +1,55 @@
+#!/usr/bin/bash
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Trimming reads from $FOLDER1"
+fi
+
+#Concatenate files
+DIR=${FOLDER}/output_cat
+#mkdir -p $DIR
+
+#for file1 in $(ls ${FOLDER}/dekont/*R1.fastq.gz)
+#   do
+#    file2=${file1/R1/R2}
+#    out=$(basename ${file1/R1/joined})
+#    cat "$file1" "$file2" > ${DIR}/${out} 
+#   done
+
+
+
+#Run HUMAnN2
+DIR2=${FOLDER}/hmn2
+mkdir -p $DIR2
+#for file in ${DIR}/*.fastq.gz
+ #  do
+  #  time humann2 --input $file \
+   #  --output $DIR2 \
+    # --metaphlan /home/nanoteam/programs/MetaPhlAn2 \
+     #--nucleotide-database /home/nanoteam/Desktop/Metagenomics-scripts/humann2_db/full_chocophlan_plus_viral.v0.1.1 \
+     #--protein-database /home/nanoteam/Desktop/Metagenomics-scripts/humann2_db/uniref
+  # done
+
+
+#export PATH=/home/nanoteam/programs/MetaPhlAn2:$PATH
+#export mpa_dir=/home/nanoteam/programs/MetaPhlAn2
+
+
+export PATH=/home/nanoteam/programs/MetaPhlAn-2.7.8:$PATH
+time humann2 --input /home/nanoteam/Desktop/Metagenomics_zahn/output_cat/PK1_removed_joined.fastq.gz \
+     --output $DIR2 \
+     --metaphlan /home/nanoteam/programs/MetaPhlAn2 \
+     --nucleotide-database /home/nanoteam/Desktop/Metagenomics-scripts/humann2_db/full_chocophlan_plus_viral.v0.1.1 \
+     --protein-database /home/nanoteam/Desktop/Metagenomics-scripts/humann2_db/uniref
+
+#humann2_join_tables --input $DIR2/ --file_name pathabundance --output humann2_pathabundance.tsv
+#humann2_join_tables --input $DIR2/ --file_name genefamilies --output humann2_genefamilies.tsv
+
+#humann2_join_tables --input $DIR2/ --file_name pathabundance --output ${sample}_pathabundance.tsv
+#humann2_join_tables --input $DIR2/ --file_name genefamilies --output ${sample}_genefamilies.tsv
+humann2_databases --download utility_mapping full /home/nanoteam/Desktop/Metagenomics-scripts/humann2_db
+
+humann2 –input /home/nanoteam/Downloads/humann2-2.8.2/examples/demo.fastq –output /home/nanoteam/Downloads/humann2-2.8.2/
+metaphlan2.py --install --bowtie2db /home/nanoteam/programs/MetaPhlAn2/mpa_v20_m20

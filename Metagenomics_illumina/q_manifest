@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Quality control run $FOLDER1"
+fi
+
+DIR=${FOLDER}/qiime
+mkdir -p $DIR
+
+echo "sample-id,absolute-filepath,direction" > ${DIR}/manifest.csv 
+for i in ${FOLDER}/dekont/*R1* ; do echo "$(basename ${i/_removed_R1.fastq}),$PWD/$i,forward"; done >> ${DIR}/manifest.csv 
+for i in ${FOLDER}/dekont/*R2* ; do echo "$(basename ${i/_removed_R2.fastq}),$PWD/$i,reverse"; done >> ${DIR}/manifest.csv
+

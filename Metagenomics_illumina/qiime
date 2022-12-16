@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Quality control run $FOLDER1"
+fi
+
+DIR=${FOLDER}/qiime
+
+qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
+--input-path ${DIR}/manifest.csv \
+--output-path ${DIR}/demux.qza \
+--input-format PairedEndFastqManifestPhred33
+

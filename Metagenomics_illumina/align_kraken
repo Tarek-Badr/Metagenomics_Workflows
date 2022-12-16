@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Running kraken2 on $FOLDER1"
+fi
+
+DIR=${FOLDER}/kraken
+mkdir -p ${DIR}
+
+for file1 in $(ls ${FOLDER}/dekont/*R1.fastq.gz)
+   do
+    file2=${file1%%R1.fastq.gz}"R2.fastq.gz"
+    sample=$(basename ${file1%%removed_R1.fastq.gz})
+    time /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE \
+    --paired $file1 $file2 \
+    --output "${DIR}/${sample}.kraken" \
+    --report "${DIR}/${sample}.kreport2.txt" --use-names
+
+    time /home/nanoteam/programs/kraken2/kraken2 --db /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE \
+    --paired $file1 $file2 \
+    --output "${DIR}/${sample}.krona.kraken" 
+   done
+
+

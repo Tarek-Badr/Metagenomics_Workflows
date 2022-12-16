@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+export PATH=/home/nanoteam/programs/MetaPhlAn2:$PATH
+export mpa_dir=/home/nanoteam/programs/MetaPhlAn2

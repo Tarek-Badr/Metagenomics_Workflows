@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Quality control run $FOLDER1"
+fi
+
+DIR=${FOLDER}/qiime2
+
+qiime dada2 denoise-paired \
+--i-demultiplexed-seqs ${DIR}/demux.qza \
+--p-trim-left-f 0 \
+--p-trim-left-r 0 \
+--p-trunc-len-f 0 \
+--p-trunc-len-r 0 \
+--o-table ${DIR}/feature_table.qza \
+--o-representative-sequences ${DIR}/rep-seqs.qza \
+--o-denoising-stats ${DIR}/stats-dada2.qza
