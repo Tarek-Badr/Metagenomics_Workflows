@@ -10,13 +10,13 @@ fi
 DIR=${FOLDER}/trimmed
 mkdir -p $DIR
 
-for file1 in $(ls ${FOLDER}/Fastq/*2_1.fastq.gz)
+for file1 in $(ls ${FOLDER}/Fastq/*1.fastq.gz)
 do
     file2=${file1%%1.fastq.gz}"2.fastq.gz"
     sample=$(basename ${file1%%1.fastq.gz})
     echo "Trimming $file1 and $file2"
     ADAPTERS=/home/nanoteam/programs/Trimmomatic-0.39/adapters/NexteraPE-PE.fa:2:30:10
-    time java -jar /home/nanoteam/programs/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 -trimlog ${DIR}/${sample}trimlog.txt $file1 $file2 ${DIR}/${sample}1_P.fastq.gz ${DIR}/${sample}1_UP.fastq.gz ${DIR}/${sample}2_P.fastq.gz ${DIR}/${sample}2_UP.fastq.gz  ILLUMINACLIP:${ADAPTERS} LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36   
+    time java -jar /home/nanoteam/programs/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 -trimlog ${DIR}/${sample}trimlog.txt $file1 $file2 ${DIR}/${sample}1_P.fastq.gz ${DIR}/${sample}1_UP.fastq.gz ${DIR}/${sample}2_P.fastq.gz ${DIR}/${sample}2_UP.fastq.gz ILLUMINACLIP:${ADAPTERS} LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36   
 done
 
 
