@@ -42,40 +42,7 @@ theme_set(theme_bw())
 #### End ####
 
 
-####add samples metadata and match to count table####
 
-sample_info_tab <- read.table("zahn_metadata.txt",header=T, 
-                              row.names = 1, check.names=F)
-
-metadata = sample_data(sample_info_tab)
-# rename all table to match phyloseq input
-
-
-#examine consistancy in order between cts col names and coldata rownames 
-#(they have to be in the same order or Deseq2 won't work out)
-
-all(rownames(sample_info_tab) %in% colnames(count_tab))
-all(rownames(sample_info_tab) == colnames(count_tab))
-
-
-all(rownames(tax_tab) %in% rownames(count_tab))
-all(rownames(tax_tab) == rownames(count_tab))
-
-gplots::venn(list(taxonomy=rownames(tax_tab), featuretable=rownames(count_tab)))
-
-
-sample_names(physeq_patients)
-
-all(rownames(sample_info_tab) %in% sample_names(physeq_patients))
-all(rownames(sample_info_tab) == sample_names(physeq_patients))
-
-
-all(rownames(tax_tab) %in% rownames(count_tab))
-all(rownames(tax_tab) == rownames(count_tab))
-
-gplots::venn(list(taxonomy=rownames(tax_tab), featuretable=rownames(count_tab)))
-
-#### End ####
 
 #### Rarefaction curves ####
 rarecurve(t(count_tab), step=100, lwd=2, ylab="ASVs")
@@ -85,8 +52,13 @@ abline(v=(min(rowSums(t(count_tab)))))
 ####Imported kraken-biom file into phyloseq object####
 #
 biomfilename = "S-table.biom"
+
 data <- import_biom(biomfilename, parseFunction=parse_taxonomy_default)
 
+#change sample names
+sample_names(data)
+sample_names(data) = gsub(pattern = "_.S", replacement = "", x = sample_names(data))
+sample_names(data)
 physeq = data
 
 #Change rank names
@@ -102,62 +74,84 @@ tax <- as.matrix.data.frame(tax)
 tax <- phyloseq::tax_table(tax)
 phyloseq::tax_table(physeq) <- tax
 
-#Adding ASV Fasta sequences and Phylogenetic tree to phyloseq object
-
-physeq_dna_tree <- merge_phyloseq(physeq, ph_tree, dna) #Merging  ASV Fasta sequences and Phylogenetic tree to phyloseq object
-
-taxa_names(physeq_dna_tree) <- paste0("ASV", seq(ntaxa(physeq_dna_tree)))
-
 physeq
-physeq_dna_tree
-physeq = physeq_dna_tree
+
 
 #### End ####
 
-## Phyloseq Object Filtering ## First filtering step for low count samples and NA phyla ##
-change sample names
 
-sample_names(data) = gsub(pattern = "_.S", replacement = "", x = sample_names(data))
+## Phyloseq Object Filtering ## First filtering step for low count samples and NA phyla ##
+
 #### remove samples with less than 100 total reads####
 sample_sums(physeq) #Nr of reads per Sample
-#AA68a  AA68b  AP83a  AP83b  CG86a  CG86b CTH56a CTH56b  KS66a  KS66b  LG00a  LG00b  LR00a  LR00b  SM59a  SM59b 
-#7299   3421   5064     22   5147   7457   3302   3126   2024   1218   3494   2495   2028   2130   1513   3427 
 
-physeq_above100reads = prune_samples(sample_sums(physeq)>=100, physeq)
-
-#As sample AP83b was excluded due to low read count, its pair AP83a was alos excluded
-newPhyloObject = subset_samples(data, Patient_ID != "PK1")
-newPhyloObject
-
-remove positive controls
+#remove positive controls
 to_remove <- c("PK1", "PK2")
 
-physeq_patients <- prune_samples(!(sample_names(data) %in% to_remove), data)
+
+physeq_patients <- prune_samples(!(sample_names(physeq) %in% to_remove), physeq)
+
+
+####add samples metadata and match to count table####
+
+sample_info_tab <- read.table("zahn_metadata.txt",header=T, 
+                              row.names = 1, check.names=F)
+
+metadata = sample_data(sample_info_tab)
+
+#examine consistancy in order between cts col names and coldata rownames 
+#(they have to be in the same order or Deseq2 won't work out)
+
+sample_names(physeq_patients)
+
+all(rownames(sample_info_tab) %in% sample_names(physeq_patients))
+all(rownames(sample_info_tab) == sample_names(physeq_patients))
+
+
+#### End ####
 
 #add metadata:-
-  
-  
+physeq_met <- merge_phyloseq(physeq_patients, metadata) 
 
-physeq_patmet <- merge_phyloseq(physeq_patients, metadata) 
+#### End ####
+
+
+####remove NA Phyla####
+physeq = physeq_met
+
+rank_names(physeq)
+
+table(tax_table(physeq)[, "Kingdom"], exclude = NULL)
+#table(tax_table(physeq)[, "Species"], exclude = NULL)
+
+physeq_oNA <- subset_taxa(physeq, !is.na(Kingdom) & Kingdom == "k__Bacteria")
+
+table(tax_table(physeq_oNA)[, "Kingdom"], exclude = NULL)
+
+physeq = physeq_oNA
+
+table(tax_table(physeq)[, "Kingdom"], exclude = NULL)
+table(tax_table(physeq)[, "Phylum"], exclude = NULL)
+
+#### End ####
+
+#### save count table and meta data ####
+
+count_tab = as(otu_table(physeq), "matrix")
+
+tax_tab = as(tax_table(physeq), "matrix")
+
+meta_tab = as(sample_data(physeq), "matrix")
+
 
 #### End ####
 
 #### alpha-diversity (Richness and diversity estimates), "should be done in non filtered physeq"####
 
-sample_variables(zdata)
+sample_variables(physeq)
+
 
 # Visualize alpha-diversity on unfiltered phyloseq object
-
-P2 = plot_richness(zdata, x="tooth", title = "Alpha Diversity", measures=c( "Shannon", "InvSimpson"))
-
-P2 = plot_richness(zdata, x="implant", title = "Alpha Diversity", measures=c( "Shannon", "InvSimpson"))
-
-P2 = plot_richness(zdata, x="time", color = "tooth", shape = "implant", title = "Alpha Diversity", measures=c( "Shannon", "InvSimpson"))
-
-P2 +
-  geom_boxplot() +
-  theme_bw() +
-  theme(strip.background = element_blank(), axis.text.x.bottom = element_text(angle = -30))
 
 
 P3 = plot_richness(physeq, x="time", color = "tooth", shape = "implant", title = "Alpha Diversity", measures=c( "Shannon", "InvSimpson"))
@@ -259,21 +253,6 @@ tab.Chao1
 
 #### End ####
 
-####remove NA Phyla####
-physeq = physeq_patmet
-
-rank_names(physeq)
-
-table(tax_table(physeq)[, "Kingdom"], exclude = NULL)
-table(tax_table(physeq)[, "Species"], exclude = NULL)
-
-physeq_oNA <- subset_taxa(physeq, !is.na(Kingdom) & Kingdom == "k__Bacteria")
-
-physeq = physeq_oNA
-
-table(tax_table(physeq)[, "Phylum"], exclude = NULL)
-
-#### End ####
 
 ##Filter low Abundance Taxa and count table normalization##
 
@@ -286,7 +265,7 @@ prevdf = data.frame(Prevalence = prev0,
                     tax_table(physeq))
 
 #save ASV Prevalence and Abundance table before filtering
-write.table(prevdf, "asv_prevdf.tsv", sep="\t", quote=F, col.names=NA)
+write.table(prevdf, "asv_prevdf_filtered.tsv", sep="\t", quote=F, col.names=NA)
 
 #Plot Taxa prevalence v. total counts. Each point is a different taxa. 
 ggplot(prevdf, aes(TotalAbundance, Prevalence / nsamples(physeq),color=Phylum)) +
@@ -440,8 +419,11 @@ gg_ordiplot(ord.nmds.bray, groups=sampdf$tooth,
 # Customization
 ordiplot <- gg_ordiplot(ord.nmds.bray, groups=sampdf$tooth, hull = TRUE, spiders = TRUE, 
                        ellipse = FALSE, plot = FALSE)
+ordiplot$df_ord$implant <- sampdf$implant
+ordiplot$df_ord$time <- sampdf$time
+ordiplot$ord
 
-ordiplot$plot + theme_bw() + labs(color = "tooth", x = "NMDS 1", y = "NMDS 2", title = "NMDS ordination of tooth samples using Bray–Curtis dissimilarity index") + 
+ordiplot$plot + theme_bw() + labs(color = "time", shape= "time", x = "NMDS 1", y = "NMDS 2", title = "NMDS ordination of tooth samples using Bray–Curtis dissimilarity index") + 
   theme(plot.title = element_text(hjust = 0.5)) 
 
 
@@ -454,7 +436,6 @@ ordiplot$plot + theme_bw() + labs(color = "tooth", shape = "implant", x = "NMDS 
   theme(plot.title = element_text(hjust = 0.5)) 
 # Add another variable to plot
 ord.data2 <- ordiplot$df_ord
-ord.data2$tooth <- sampdf$tooth
 ord.data2$implant <- sampdf$implant
 colnames(ord.data2) <- c("x", "y", "tooth", "implant")
 head(ord.data2)
@@ -464,9 +445,11 @@ ggplot(data = ord.data2, aes(x = x, y = y, color = tooth, shape = implant)) + ge
 
 #### plot ordination with plot_ordination from Phyloseq ####
 
-plot_ordination(ps.prop, ord.nmds.bray, color="OP_Status", title="Bray NMDS")
+plot_ordination(ps.prop, ord.nmds.bray, color="time", shape ="implant", title="Bray NMDS")
 
 plot_ps = plot_ordination(ps.prop, ord.nmds.bray, color="tooth", shape ="implant", title="NMDS ordination of tooth samples using Bray–Curtis dissimilarity") 
+
+plot_ps + geom_polygon(aes(fill=tooth)) + geom_point(size=5) + ggtitle("samples")
 
 plot_ps + geom_point(size=8, alpha=0.5) + scale_colour_brewer(type="qual", palette="Set1")
 
@@ -758,6 +741,8 @@ deseq_counts_filtered #rownames/ASVs (1424)
 writeLines(capture.output(sessionInfo()), "sessionInfo_11Nov2022.txt")
 
 #### End ####
+
+
 
 
 
