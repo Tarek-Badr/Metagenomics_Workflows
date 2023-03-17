@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+echo "Add metadata previously to running this script!"
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+	read -p "Input file (e.g. humann_pathabundance_met.tsv): " INPUT
+	read -p "Prefix for output (blank or e.g. tooth): " NAME
+else
+    echo "Creating barplot from $FOLDER1"
+fi
+
+humann_barplot --input $INPUT --focal-feature $PATHWAY --focal-metadata implant --last-metadata time --o plot_${NAME}_${PATHWAY}_implant.png --sort sum metadata --scaling logstack
+humann_barplot --input $INPUT --focal-feature $PATHWAY --focal-metadata tooth --last-metadata time --o plot_${NAME}_${PATHWAY}_tooth.png --sort sum metadata --scaling logstack
+humann_barplot --input $INPUT --focal-feature $PATHWAY --focal-metadata time --last-metadata time --o plot_${NAME}_${PATHWAY}_time.png --sort sum metadata --scaling logstack
