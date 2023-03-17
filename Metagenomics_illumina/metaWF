@@ -4,16 +4,26 @@
 read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
 FOLDER1=$(basename $FOLDER)
 
+# Quality control
 DATA=rawdata
 source /home/nanoteam/Desktop/Metagenomics-scripts/fQC
 source /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+
+# Trimming and quality control on trimmed data
 source /home/nanoteam/Desktop/Metagenomics-scripts/trim
 DATA=trimmed
 source /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+source /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+
+# Human decontamination
 source /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
-DATA=dekont
-source /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+#DATA=dekont
+#source /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+#source /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+
+# Kraken alignment
 source /home/nanoteam/Desktop/Metagenomics-scripts/align_kraken
+
 source /home/nanoteam/Desktop/Metagenomics-scripts/kronap
 source /home/nanoteam/Desktop/Metagenomics-scripts/bracken
 source /home/nanoteam/Desktop/Metagenomics-scripts/k_biom
