@@ -3,13 +3,16 @@
 if [ -z ${FOLDER} ];
 then
     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+    read -p "Run quality control on (e.g. rawdata/trimmed/dekont): " DATA
 else
     echo "Quality control run $FOLDER1"
 fi
 
-mkdir -p ${FOLDER}/fastQC/rawdata
+DIR=${FOLDER}/fastQC/$DATA
 
-for file in $(ls ${FOLDER}/Fastq/*.fastq.gz)
+mkdir -p ${DIR}
+
+for file in $(ls ${FOLDER}/Fastq/*_P.fastq.gz)
 do
-    fastqc -t 5 $file -o ${FOLDER}/fastQC/rawdata
+    fastqc -t 10 $file -o ${DIR}
 done
