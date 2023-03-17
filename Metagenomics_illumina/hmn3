@@ -1,0 +1,43 @@
+#!/usr/bin/bash
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Running Humann3 on $FOLDER1"
+fi
+
+DBPATH=/media/cantera/ramirez/Sara/Databases
+
+DIR=${FOLDER}/output_cat
+
+# Running humann3 
+
+DIR2=${FOLDER}/hmn3
+mkdir -p $DIR2
+
+for file in ${DIR}/*.fastq.gz
+   do
+    time humann --input $file \
+     --output $DIR2 \
+     --metaphlan-options "-x mpa_v30_CHOCOPhlAn_201901 --bowtie2db ${DBPATH}/metaphlan_databases" \
+     --nucleotide-database ${DBPATH}/humann3/chocophlan \
+     --protein-database ${DBPATH}/humann3/uniref --threads 30
+   done
+
+# Transforming genefamilies to relative abundance
+
+for file in $DIR2/*_genefamilies.tsv
+do
+    name=${file%%.tsv}
+    humann_renorm_table --input $file --output ${name}_relab.tsv --units relab
+done
+
+# Transforming pathabundance to relative abundance
+
+for file in $DIR2/*_pathabundance.tsv
+do
+    name=${file%%.tsv}
+    humann_renorm_table --input $file --output ${name}_relab.tsv --units relab
+done
+
