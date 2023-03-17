@@ -7,6 +7,9 @@ else
     echo "Running bowtie2"
 fi
 
+# Pathway to bowtie reference
+REF=/home/nanoteam/Desktop/Metagenomics-scripts/bowtie2_hg19/hg19
+
 DIR=${FOLDER}/dekont
 mkdir -p $DIR
 
@@ -15,7 +18,7 @@ do
     file2=${file1%%1_P.fastq.gz}"2_P.fastq.gz"
     sample=$(basename ${file1%%1_P.fastq.gz})
     echo "Running bowtie2 on $file1 and $file2"
-    time bowtie2 -x /home/nanoteam/Desktop/Metagenomics-scripts/bowtie2_hg19/hg19 -1 $file1 -2 $file2 --un-conc-gz ${DIR}/${sample}host_removed #> ${DIR}/${sample}human_reads.sam
+    time bowtie2 -x $REF -1 $file1 -2 $file2 --un-conc-gz ${DIR}/${sample}host_removed #> ${DIR}/${sample}human_reads.sam
 mv ${DIR}/${sample}host_removed.1 ${DIR}/${sample}removed_R1.fastq.gz
 mv ${DIR}/${sample}host_removed.2 ${DIR}/${sample}removed_R2.fastq.gz
 #rm ${sample}human_reads.sam
