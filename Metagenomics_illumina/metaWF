@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+
+read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+FOLDER1=$(basename $FOLDER)
+
+DATA=rawdata
+source /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+source /home/nanoteam/Desktop/Metagenomics-scripts/mQC
+source /home/nanoteam/Desktop/Metagenomics-scripts/trim
+DATA=trimmed
+source /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+source /home/nanoteam/Desktop/Metagenomics-scripts/filthuman_bowtie
+DATA=dekont
+source /home/nanoteam/Desktop/Metagenomics-scripts/fQC
+source /home/nanoteam/Desktop/Metagenomics-scripts/align_kraken
+source /home/nanoteam/Desktop/Metagenomics-scripts/kronap
+source /home/nanoteam/Desktop/Metagenomics-scripts/bracken
+source /home/nanoteam/Desktop/Metagenomics-scripts/k_biom
+
+
