@@ -3,10 +3,14 @@
 if [ -z ${FOLDER} ];
 then
     read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+	read -p "Run quality control on (e.g. rawdata/trimmed/dekont): " DATA
 else
     echo "Quality control run $FOLDER1"
 fi
 
-mkdir -p ${FOLDER}/multiQC
+INDIR=${FOLDER}/fastQC/$DATA
+DIR=${FOLDER}/multiQC
 
-multiqc ${FOLDER}/fastQC/rawdata/*_fastqc.zip -o ${FOLDER}/multiQC --filename rawdata
+mkdir -p ${DIR}
+
+multiqc ${INDIR}/*_fastqc.zip -o ${DIR} --filename $(basename ${INDIR})
