@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Running metaSPAdes on $FOLDER1"
+fi
+
+SPADIR=/media/cantera/ramirez/Sara/Programs/SPAdes/SPAdes-3.15.5-Linux/bin
+
+for file1 in $(ls ${FOLDER}/dekont/*R1.fastq.gz)
+   do
+    file2=${file1%%R1.fastq.gz}"R2.fastq.gz"
+    sample=$(basename ${file1%%removed_R1.fastq.gz})
+    DIR=${FOLDER}/metaSP/${sample}
+    mkdir -p ${DIR}
+	
+    time ${SPADIR}/spades.py --meta	-1	$file1	-2	$file2	-o	${DIR}	-t 40
+
+   done
