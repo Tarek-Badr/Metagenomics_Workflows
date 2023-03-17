@@ -7,22 +7,25 @@ else
     echo "Running bracken on $FOLDER1"
 fi
 
+# Change path to database
+DB=/home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE
+
 DIR=${FOLDER}/bracken
 mkdir -p ${DIR}
 
 for file in $(ls ${FOLDER}/kraken/*.kreport2.txt)
     do
         sample=$(basename ${file%%.kreport2.txt})
-        time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l D  -i $file -o ${DIR}/${sample}.D.bracken -w ${DIR}/${sample}.D.txt
-        time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l P  -i $file -o ${DIR}/${sample}.P.bracken -w ${DIR}/${sample}.P.txt
-        time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l C  -i $file -o ${DIR}/${sample}.C.bracken -w ${DIR}/${sample}.C.txt
-        time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l O  -i $file -o ${DIR}/${sample}.O.bracken -w ${DIR}/${sample}.O.txt
-        time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l F  -i $file -o ${DIR}/${sample}.F.bracken -w ${DIR}/${sample}.F.txt
-        time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l G  -i $file -o ${DIR}/${sample}.G.bracken -w ${DIR}/${sample}.G.txt
-        time bracken -d /home/nanoteam/Desktop/Nano16S-scripts/minikraken2_v2_8GB_201904_UPDATE -t 10 -r 150 -l S  -i $file -o ${DIR}/${sample}.S.bracken -w ${DIR}/${sample}.S.txt
+        time bracken -d $DB -t 10 -r 150 -l D  -i $file -o ${DIR}/${sample}.D.bracken -w ${DIR}/${sample}.D.txt
+        time bracken -d $DB -t 10 -r 150 -l P  -i $file -o ${DIR}/${sample}.P.bracken -w ${DIR}/${sample}.P.txt
+        time bracken -d $DB -t 10 -r 150 -l C  -i $file -o ${DIR}/${sample}.C.bracken -w ${DIR}/${sample}.C.txt
+        time bracken -d $DB -t 10 -r 150 -l O  -i $file -o ${DIR}/${sample}.O.bracken -w ${DIR}/${sample}.O.txt
+        time bracken -d $DB -t 10 -r 150 -l F  -i $file -o ${DIR}/${sample}.F.bracken -w ${DIR}/${sample}.F.txt
+        time bracken -d $DB -t 10 -r 150 -l G  -i $file -o ${DIR}/${sample}.G.bracken -w ${DIR}/${sample}.G.txt
+        time bracken -d $DB -t 10 -r 150 -l S  -i $file -o ${DIR}/${sample}.S.bracken -w ${DIR}/${sample}.S.txt
     done
 
-
+# Merging bracken output
 
 mkdir -p ${DIR}_merged
 
