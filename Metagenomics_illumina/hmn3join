@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+if [ -z ${FOLDER} ];
+then
+    read -p "Folder (e.g. Metagenomics_zahn): " FOLDER
+else
+    echo "Joining humann3 files from $FOLDER1"
+fi
+
+DIR=${FOLDER}/hmn3
+
+echo "Joining genefamilies from $FOLDER"
+humann_join_tables --input $DIR --output ${FOLDER}/humann_genefamilies.tsv --file_name genefamilies_relab
+echo "Joining pathcoverage from $FOLDER"
+humann_join_tables --input $DIR --output ${FOLDER}/humann_pathcoverage.tsv --file_name pathcoverage
+echo "Joining pathabundance from $FOLDER"
+humann_join_tables --input $DIR --output ${FOLDER}/humann_pathabundance.tsv --file_name pathabundance_relab
